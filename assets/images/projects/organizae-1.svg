@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="800" height="450" rx="14" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="14" fill="#0F172A"/>
+  <rect y="28" width="800" height="14" fill="#0F172A"/>
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="5.5" fill="#10B981"/>
+
+  <!-- Address Bar -->
+  <rect x="180" y="9" width="440" height="24" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="25" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">
+    🔒 https://organizae-a9590.web.app/dashboard
+  </text>
+
+  <!-- Tag Title on Right -->
+  <text x="770" y="25" fill="#38BDF8" font-family="'Inter', sans-serif" font-weight="600" font-size="11" text-anchor="end">
+    OrganizAE • Dashboard Analítico
+  </text>
+
+  <!-- Body Content -->
+  <g transform="translate(0, 42)">
+    
+    <rect width="800" height="408" fill="#0B0F17"/>
+
+    <!-- Sidebar Mini -->
+    <rect width="64" height="408" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="32" cy="32" r="14" fill="#10B981"/>
+    <text x="32" y="37" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="800" font-size="14" text-anchor="middle">O</text>
+    <text x="32" y="80" fill="#10B981" font-size="16" text-anchor="middle">📊</text>
+    <text x="32" y="125" fill="#94A3B8" font-size="16" text-anchor="middle">🧾</text>
+    <text x="32" y="170" fill="#94A3B8" font-size="16" text-anchor="middle">💳</text>
+    <text x="32" y="215" fill="#94A3B8" font-size="16" text-anchor="middle">⚙️</text>
+
+    <!-- Main Content -->
+    <g transform="translate(84, 16)">
+      <!-- Top Stats Row -->
+      <text x="0" y="20" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="700" font-size="17">Visão Geral Financeira</text>
+      <text x="0" y="38" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Mês Vigente • Sincronizado via Firebase Firestore</text>
+
+      <!-- Stat Box 1: Saldo -->
+      <rect x="0" y="52" width="215" height="74" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="16" y="74" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">SALDO TOTAL</text>
+      <text x="16" y="102" fill="#34D399" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20">R$ 14.850,40</text>
+
+      <!-- Stat Box 2: Receitas -->
+      <rect x="230" y="52" width="215" height="74" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="246" y="74" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">RECEITAS DO MÊS</text>
+      <text x="246" y="102" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20">R$ 8.920,00</text>
+
+      <!-- Stat Box 3: Despesas -->
+      <rect x="460" y="52" width="220" height="74" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="476" y="74" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">DESPESAS DO MÊS</text>
+      <text x="476" y="102" fill="#F87171" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="20">R$ 3.480,25</text>
+
+      <!-- Analytics Chart Section -->
+      <rect x="0" y="142" width="445" height="230" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="20" y="170" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="600" font-size="13">Fluxo de Caixa Diário (Recharts)</text>
+
+      <!-- Chart grid lines -->
+      <line x1="40" y1="210" x2="415" y2="210" stroke="#1E293B" stroke-dasharray="4,4"/>
+      <line x1="40" y1="260" x2="415" y2="260" stroke="#1E293B" stroke-dasharray="4,4"/>
+      <line x1="40" y1="310" x2="415" y2="310" stroke="#1E293B" stroke-dasharray="4,4"/>
+
+      <!-- Bars -->
+      <rect x="60" y="230" width="18" height="80" rx="3" fill="#10B981"/>
+      <rect x="82" y="270" width="18" height="40" rx="3" fill="#EF4444"/>
+
+      <rect x="130" y="210" width="18" height="100" rx="3" fill="#10B981"/>
+      <rect x="152" y="250" width="18" height="60" rx="3" fill="#EF4444"/>
+
+      <rect x="200" y="195" width="18" height="115" rx="3" fill="#10B981"/>
+      <rect x="222" y="280" width="18" height="30" rx="3" fill="#EF4444"/>
+
+      <rect x="270" y="225" width="18" height="85" rx="3" fill="#10B981"/>
+      <rect x="292" y="260" width="18" height="50" rx="3" fill="#EF4444"/>
+
+      <rect x="340" y="180" width="18" height="130" rx="3" fill="#10B981"/>
+      <rect x="362" y="275" width="18" height="35" rx="3" fill="#EF4444"/>
+
+      <!-- Donut Chart / Categorias -->
+      <rect x="460" y="142" width="220" height="230" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="476" y="170" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="600" font-size="13">Despesas por Categoria</text>
+      
+      <!-- Mock Donut -->
+      <circle cx="570" cy="245" r="45" fill="none" stroke="#38BDF8" stroke-width="18" stroke-dasharray="140, 200"/>
+      <circle cx="570" cy="245" r="45" fill="none" stroke="#10B981" stroke-width="18" stroke-dasharray="70, 200" stroke-dashoffset="-140"/>
+      <circle cx="570" cy="245" r="45" fill="none" stroke="#F59E0B" stroke-width="18" stroke-dasharray="50, 200" stroke-dashoffset="-210"/>
+      <text x="570" y="250" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="700" font-size="13" text-anchor="middle">100%</text>
+
+      <text x="476" y="325" fill="#38BDF8" font-size="11">● Alimentação (48%)</text>
+      <text x="476" y="342" fill="#10B981" font-size="11">● Moradia (32%)</text>
+      <text x="476" y="359" fill="#F59E0B" font-size="11">● Transporte (20%)</text>
+    </g>
+    
+  </g>
+</svg>

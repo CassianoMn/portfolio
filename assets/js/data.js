@@ -1,7 +1,3 @@
-// =============================================================================
-// Portfólio Cassiano Menezes - Base de Dados Estruturada (Projetos, Skills, CVs)
-// =============================================================================
-
 window.PORTFOLIO_DATA = {
   personal: {
     name: "Cassiano Menezes",
@@ -101,7 +97,7 @@ window.PORTFOLIO_DATA = {
     {
       label: { pt: "Engenharia & Qualidade", en: "Engineering & Quality" },
       value: { pt: "Testes Automatizados", en: "Automated Testing" },
-      sub: { pt: "Clean Code & Arquitetura Sólida", en: "Clean Code & Solid Architecture" }
+      sub: { pt: "MSTest, Moq, InMemory e Playwright", en: "MSTest, Moq, InMemory & Playwright" }
     },
     {
       label: { pt: "Arquiteturas de Software", en: "Software Architectures" },
@@ -123,25 +119,37 @@ window.PORTFOLIO_DATA = {
       badgeType: "tech",
       personas: ["dotnet", "react", "all"],
       subtitle: {
-        pt: "Plataforma SaaS & Marketplace com Geolocalização Inteligente para o Varejo de Motopeças",
-        en: "SaaS Platform & Marketplace with Intelligent Geolocation for Motorcycle Parts Retail"
+        pt: "Marketplace com Geolocalização & Compatibilidade Técnica de Motopeças",
+        en: "Marketplace with Geolocation & Motorcycle Parts Technical Compatibility"
       },
       description: {
-        pt: "Trabalho de Conclusão de Curso em Sistemas de Informação na Universidade Federal de Sergipe. Desenvolvido no modelo two-sided market conectando motociclistas a oficinas e autopeças. Conta com Web API robusta em ASP.NET Core (.NET 8), autenticação segura JWT com BCrypt, documentação Swagger/OpenAPI e banco de dados PostgreSQL com a extensão PostGIS (via NetTopologySuite) para cálculo de raio geoespacial e recomendação por compatibilidade técnica de peças. Front-end dinâmico construído em React 19, TypeScript, Vite e Leaflet Maps.",
-        en: "B.Sc. Thesis in Information Systems at UFS. Designed as a two-sided market connecting riders to repair shops and auto parts retailers. Features a robust ASP.NET Core (.NET 8) Web API, secure JWT authentication with BCrypt, Swagger/OpenAPI documentation, and a PostgreSQL database with PostGIS extension (via NetTopologySuite) for geospatial radius calculations and technical compatibility matching. Dynamic front-end built with React 19, TypeScript, Vite, and Leaflet Maps."
+        pt: "Plataforma marketplace desenvolvida como TCC na UFS. Conecta motociclistas a autopeças através de consultas geoespaciais por raio com PostgreSQL e PostGIS. Conta com Web API escalável em ASP.NET Core (.NET 8), autenticação segura JWT e front-end responsivo em React 19 com Leaflet Maps.",
+        en: "Marketplace platform developed as B.Sc. thesis at UFS. Connects riders to auto parts shops via geospatial radius queries with PostgreSQL and PostGIS. Powered by a scalable ASP.NET Core (.NET 8) Web API, secure JWT authentication, and a responsive React 19 front-end with Leaflet Maps."
       },
+      screens: [
+        {
+          src: "assets/images/projects/radarpecas-1.svg",
+          alt: "RadarPeças - Busca Geoespacial e Mapa de Oficinas",
+          caption: { pt: "Busca Geoespacial & Mapa com PostGIS", en: "Geospatial Search & Map with PostGIS" }
+        },
+        {
+          src: "assets/images/projects/radarpecas-2.svg",
+          alt: "RadarPeças - Catálogo e Verificação de Compatibilidade",
+          caption: { pt: "Catálogo & Compatibilidade Técnica por Modelo", en: "Catalog & Technical Compatibility by Model" }
+        }
+      ],
       highlights: {
         pt: [
-          "Arquitetura em Camadas com Clean Architecture e Injeção de Dependências",
-          "Consultas geoespaciais e busca por raio via PostgreSQL + PostGIS",
+          "Consultas espaciais e busca por raio via PostgreSQL + PostGIS",
+          "Web API em .NET 8 com Clean Architecture e Injeção de Dependências",
           "Autenticação e autorização RBAC via JWT e BCrypt",
-          "SPA moderno e responsivo com React 19, TypeScript e mapas interativos Leaflet"
+          "SPA dinâmico e responsivo com React 19, TypeScript e Leaflet Maps"
         ],
         en: [
-          "Layered Architecture with Clean Architecture principles and Dependency Injection",
-          "Geospatial queries and radius searches using PostgreSQL + PostGIS",
-          "RBAC authentication and authorization via JWT and BCrypt",
-          "Modern responsive SPA with React 19, TypeScript, and interactive Leaflet maps"
+          "Geospatial queries and radius searches via PostgreSQL + PostGIS",
+          "ASP.NET Core .NET 8 Web API with Clean Architecture and DI",
+          "RBAC authentication and authorization with JWT and BCrypt",
+          "Dynamic responsive SPA with React 19, TypeScript, and Leaflet Maps"
         ]
       },
       techs: ["C#", ".NET 8", "ASP.NET Core Web API", "PostgreSQL", "PostGIS", "Entity Framework Core", "React 19", "TypeScript", "Vite", "Leaflet", "JWT"],
@@ -155,25 +163,37 @@ window.PORTFOLIO_DATA = {
       badgeType: "live",
       personas: ["react", "ai", "all"],
       subtitle: {
-        pt: "Sistema Completo de Gestão Financeira com IA Generativa & OCR",
-        en: "Full Financial Management System with Generative AI & OCR"
+        pt: "Gestão Financeira Inteligente com OCR e IA Generativa (Google Gemini)",
+        en: "Intelligent Financial Management with OCR and Generative AI (Google Gemini)"
       },
       description: {
-        pt: "Plataforma SaaS financeira em produção ativa no Firebase Hosting. Permite controle financeiro individual e corporativo com dashboards analíticos em tempo real. Integração pioneira de IA Generativa (Google Gemini) para OCR inteligente de cupons fiscais e faturas, extração automatizada de dados estruturados em JSON, categorização autônoma de despesas e arquitetura com fallback automático para garantir alta disponibilidade.",
-        en: "Financial SaaS platform actively running in production on Firebase Hosting. Enables individual and business financial tracking with real-time analytics dashboards. Features integration of Generative AI (Google Gemini) for smart receipt OCR, automated structured JSON data extraction, autonomous expense categorization, and an automated fallback system ensuring high availability."
+        pt: "Plataforma SaaS de controle financeiro em produção ativa no Firebase Hosting. Integração de IA Generativa (Google Gemini) para leitura óptica inteligente (OCR) de cupons fiscais, extração autônoma de dados estruturados e dashboards analíticos em tempo real.",
+        en: "Production-ready financial SaaS running on Firebase Hosting. Integrates Generative AI (Google Gemini) for smart optical character recognition (OCR) on receipts, structured data extraction, and real-time analytical dashboards."
       },
+      screens: [
+        {
+          src: "assets/images/projects/organizae-1.svg",
+          alt: "OrganizAE - Dashboard Analítico com Fluxo de Caixa",
+          caption: { pt: "Dashboard Analítico & Gráficos com Recharts", en: "Analytics Dashboard & Charts with Recharts" }
+        },
+        {
+          src: "assets/images/projects/organizae-2.svg",
+          alt: "OrganizAE - Módulo OCR com Google Gemini",
+          caption: { pt: "Extração Inteligente de Notas Fiscais com Gemini IA", en: "Smart Receipt Extraction with Gemini AI" }
+        }
+      ],
       highlights: {
         pt: [
-          "Reconhecimento óptico inteligente (OCR) com Google Gemini para notas fiscais",
+          "Leitura óptica inteligente (OCR) com Google Gemini para notas fiscais",
           "Dashboards analíticos interativos com Recharts e Tailwind CSS",
-          "Autenticação, banco de dados NoSQL e hosting via Firebase (Firestore / Auth)",
-          "Interface responsiva, moderna e rápida construída com React 19 e TypeScript"
+          "Autenticação e banco NoSQL em tempo real via Firebase Firestore",
+          "Arquitetura com fallback automático para alta disponibilidade da IA"
         ],
         en: [
-          "Intelligent optical character recognition (OCR) with Google Gemini for receipts",
+          "Intelligent optical character recognition (OCR) with Google Gemini",
           "Interactive analytics dashboards with Recharts and Tailwind CSS",
-          "Authentication, NoSQL database, and hosting via Firebase (Firestore / Auth)",
-          "Responsive, fast, and modern interface built with React 19 and TypeScript"
+          "Authentication and real-time NoSQL database via Firebase Firestore",
+          "Automated fallback architecture ensuring high AI availability"
         ]
       },
       techs: ["React 19", "TypeScript", "Tailwind CSS", "Firebase", "Google Gemini (IA)", "OCR Inteligente", "Recharts"],
@@ -187,25 +207,37 @@ window.PORTFOLIO_DATA = {
       badgeType: "corp",
       personas: ["dotnet", "all"],
       subtitle: {
-        pt: "Plataforma Corporativa para Gestão de Eventos, Credenciamento & Frequência",
-        en: "Corporate Platform for Event Management, Accreditation & Attendance"
+        pt: "Governança de Eventos, Credenciamento Seguro & Adequação à LGPD",
+        en: "Event Governance, Secure Accreditation & LGPD Compliance"
       },
       description: {
-        pt: "Sistema corporativo utilizado para governança, inscrição, credenciamento e emissão de certificados em eventos acadêmicos e empresariais. Atuação no ciclo completo de engenharia pela empresa júnior ItatechJr / DSI - UFS. Implementação e isolamento de serviços de domínio em C#/.NET 8, controle de acesso baseado em papéis (RBAC), resolução de concorrência com travas transacionais no MySQL, conformidade com a LGPD (mitigação da exposição de dados sensíveis como CPF/Login em crachás e QR Codes), módulo interativo com biblioteca QRCoder e cobertura com testes automatizados (MSTest, Moq e EF Core InMemory).",
-        en: "Corporate system used for governance, registration, accreditation, and certificate issuance in academic and enterprise events. Full lifecycle engineering contribution at the ItatechJr junior enterprise (DSI - UFS). Implemented domain services in C#/.NET 8, role-based access control (RBAC), concurrency resolution with transactional locks in MySQL, LGPD compliance (protecting sensitive data like CPF/Login in badges and QR codes), interactive badge generator module with QRCoder, and automated test coverage (MSTest, Moq, and EF Core InMemory)."
+        pt: "Sistema corporativo para gestão de eventos acadêmicos e empresariais desenvolvido na empresa júnior ItatechJr/UFS. Implementação de serviços de domínio em C#/.NET 8, resolução de concorrência com travas transacionais no MySQL, conformidade com a LGPD em QR Codes de crachás e suíte de testes com MSTest e Moq.",
+        en: "Corporate system for academic and enterprise event management developed at ItatechJr/UFS. Built domain services in C#/.NET 8, concurrency resolution with transactional locks in MySQL, LGPD compliance for badge QR Codes, and test suites with MSTest and Moq."
       },
+      screens: [
+        {
+          src: "assets/images/projects/borala-1.svg",
+          alt: "BoraLá - Painel do Gestor e Lista de Participantes",
+          caption: { pt: "Painel do Gestor & Controle de Inscrições", en: "Manager Dashboard & Registration Control" }
+        },
+        {
+          src: "assets/images/projects/borala-2.svg",
+          alt: "BoraLá - Credenciamento com QR Code Seguro LGPD",
+          caption: { pt: "Credenciamento Rápido & Crachás com QR Code LGPD", en: "Fast Accreditation & Badges with Secure QR Code" }
+        }
+      ],
       highlights: {
         pt: [
-          "Arquitetura em camadas com separação estrita entre Domínio, Serviços e Web",
+          "Separação em camadas com isolamento estrito entre Domínio, Serviços e Web",
           "Segurança e conformidade LGPD em crachás e QR Codes criptografados",
           "Travas transacionais e resolução de concorrência no MySQL",
-          "Testes unitários e de integração com MSTest, Moq e InMemory, além de atuação em Code Reviews"
+          "Testes unitários e de integração com MSTest, Moq e EF Core InMemory"
         ],
         en: [
-          "Layered architecture with strict separation between Domain, Services, and Web",
-          "Security and LGPD compliance across encrypted badges and QR Codes",
+          "Layered architecture with strict Domain, Service, and Web separation",
+          "Security and LGPD compliance across encrypted badge QR Codes",
           "Transactional locking and concurrency resolution in MySQL",
-          "Unit and integration tests with MSTest, Moq, and InMemory, along with continuous Code Reviews"
+          "Unit and integration tests with MSTest, Moq, and EF Core InMemory"
         ]
       },
       techs: ["C#", ".NET 8", "ASP.NET Core MVC", "Entity Framework Core", "MySQL", "MSTest", "Moq", "QRCoder", "Bootstrap", "Git Flow"],
@@ -219,25 +251,37 @@ window.PORTFOLIO_DATA = {
       badgeType: "tech",
       personas: ["dotnet", "all"],
       subtitle: {
-        pt: "Plataforma Web em ASP.NET Core MVC & Refatoração para Arquitetura Hexagonal (Ports & Adapters)",
-        en: "ASP.NET Core MVC Web Platform & Hexagonal Architecture (Ports & Adapters) Evolution"
+        pt: "Plataforma Web em ASP.NET Core MVC & Refatoração Hexagonal (Ports & Adapters)",
+        en: "ASP.NET Core MVC Web Platform & Hexagonal Refactoring (Ports & Adapters)"
       },
       description: {
-        pt: "Desenvolvido originalmente como uma plataforma web de compra, venda e gestão de estoque de veículos com ASP.NET Core MVC, Razor Views, Entity Framework Core, MySQL e testes automatizados. Na disciplina de Tópicos Especiais em Engenharia de Software (TEES - UFS), o projeto passou por uma evolução profunda: refatoração completa para Arquitetura Hexagonal (Ports & Adapters) em C#/.NET 8, desacoplando totalmente as regras de negócio das tecnologias externas, acompanhada de ampla suíte de testes automatizados e estudo comparativo prático de protocolos de comunicação de rede social (REST vs. GraphQL em Node.js com testes E2E).",
-        en: "Originally built as a web platform for vehicle buying, selling, and inventory management with ASP.NET Core MVC, Razor Views, Entity Framework Core, MySQL, and automated testing. In Advanced Software Engineering (TEES - UFS), the project underwent a profound architectural evolution: complete refactoring to Hexagonal Architecture (Ports & Adapters) in C#/.NET 8, strictly decoupling domain logic from external dependencies, accompanied by a comprehensive automated test suite and an empirical comparative study between REST vs. GraphQL protocols in Node.js with E2E tests."
+        pt: "Plataforma de compra e venda de veículos em ASP.NET Core MVC com MySQL. Evoluída na disciplina de TEES (UFS) com refatoração para Arquitetura Hexagonal (Ports & Adapters) em .NET 8, isolando o núcleo de domínio, testes automatizados (unitários e E2E) e benchmark empírico entre REST e GraphQL.",
+        en: "Vehicle trading web platform in ASP.NET Core MVC with MySQL. Evolved in Advanced Software Engineering (UFS) through Hexagonal Architecture refactoring (Ports & Adapters) in .NET 8, domain core decoupling, automated testing (unit & E2E), and an empirical REST vs GraphQL benchmark."
       },
+      screens: [
+        {
+          src: "assets/images/projects/desapegauto-1.svg",
+          alt: "DesapegAuto - Catálogo de Veículos e Filtros",
+          caption: { pt: "Portal Comercial & Catálogo de Veículos (MVC)", en: "Commercial Portal & Vehicle Catalog (MVC)" }
+        },
+        {
+          src: "assets/images/projects/desapegauto-2.svg",
+          alt: "DesapegAuto - Arquitetura Hexagonal e Benchmark",
+          caption: { pt: "Arquitetura Hexagonal & Benchmark REST vs GraphQL", en: "Hexagonal Architecture & REST vs GraphQL Benchmark" }
+        }
+      ],
       highlights: {
         pt: [
-          "Versão Original: ASP.NET Core MVC estruturado, Razor Views, EF Core e MySQL",
-          "Evolução Hexagonal: Núcleo de domínio isolado com Ports & Adapters em C#/.NET 8",
-          "Alta confiabilidade com suíte completa de testes automatizados (unitários e E2E)",
-          "Estudo comparativo prático de desempenho e contratos entre RESTful e GraphQL"
+          "Versão original com ASP.NET Core MVC, Razor Views, EF Core e MySQL",
+          "Evolução Hexagonal: Núcleo de domínio isolado com Ports & Adapters em .NET 8",
+          "Suíte completa de testes automatizados com MSTest e Playwright (E2E)",
+          "Estudo comparativo prático de payload e desempenho entre REST e GraphQL"
         ],
         en: [
-          "Original Version: Structured ASP.NET Core MVC, Razor Views, EF Core, and MySQL",
-          "Hexagonal Evolution: Isolated domain core with Ports & Adapters in C#/.NET 8",
-          "High reliability with a comprehensive automated test suite (unit and E2E)",
-          "Empirical comparative study of performance and contracts between RESTful and GraphQL"
+          "Original version with ASP.NET Core MVC, Razor Views, EF Core, and MySQL",
+          "Hexagonal evolution: Isolated domain core with Ports & Adapters in .NET 8",
+          "Complete automated test suite with MSTest and Playwright (E2E)",
+          "Practical comparative benchmark of payload and latency between REST & GraphQL"
         ]
       },
       techs: ["C#", ".NET 8", "ASP.NET Core MVC", "Arquitetura Hexagonal", "Ports & Adapters", "Node.js", "REST", "GraphQL", "MySQL", "MSTest", "Playwright"],
@@ -253,23 +297,35 @@ window.PORTFOLIO_DATA = {
       personas: ["all"],
       subtitle: {
         pt: "Aplicação Desktop em Java com Interface Gráfica e Gamificação de Produtividade",
-        en: "Java Desktop Application with Graphical Interface (Swing) and Productivity Gamification"
+        en: "Java Desktop Application with Graphical Interface (Swing) and Gamification"
       },
       description: {
-        pt: "Aplicação desktop desenvolvida em Java aplicando conceitos fundamentais e avançados de Programação Orientada a Objetos (POO) e interface gráfica com Java Swing. O sistema permite o planejamento semanal estruturado de tarefas (adição, remoção e atualização de status), incorporando uma lógica de cálculo de pontuação baseada na conclusão das atividades para incentivar a produtividade e organização pessoal.",
-        en: "Desktop application built in Java applying core and advanced Object-Oriented Programming (OOP) concepts and an interactive GUI with Java Swing. Enables structured weekly task management (adding, removing, and status updates), integrating a scoring algorithm based on task completion to encourage personal productivity and focus."
+        pt: "Aplicação desktop em Java aplicando POO avançada (Encapsulamento, Herança e Polimorfismo) com interface Java Swing. Possui planejamento semanal estruturado de tarefas e algoritmo de pontuação para incentivo à produtividade diária.",
+        en: "Desktop application in Java applying advanced OOP principles (Encapsulation, Inheritance, Polymorphism) with Java Swing. Features structured weekly task management and a scoring algorithm to boost daily productivity."
       },
+      screens: [
+        {
+          src: "assets/images/projects/tarefas-1.svg",
+          alt: "Gerenciador de Tarefas - Interface Java Swing",
+          caption: { pt: "Planejador Semanal em Java Swing (GUI)", en: "Weekly Planner in Java Swing (GUI)" }
+        },
+        {
+          src: "assets/images/projects/tarefas-2.svg",
+          alt: "Gerenciador de Tarefas - Gamificação e Pontuação",
+          caption: { pt: "Painel de Produtividade Gamificada & Pontuação", en: "Gamified Productivity Dashboard & Scoring" }
+        }
+      ],
       highlights: {
         pt: [
           "Aplicação rigorosa de POO (Encapsulamento, Herança, Polimorfismo e Abstração)",
-          "Interface visual interativa desenvolvida com a biblioteca Java Swing",
-          "Lógica de pontuação dinâmica e gamificação de produtividade diária",
+          "Interface desktop interativa desenvolvida com a biblioteca Java Swing",
+          "Algoritmo de pontuação e gamificação de produtividade diária",
           "Gerenciamento estruturado de estado de tarefas"
         ],
         en: [
-          "Rigorous application of OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)",
-          "Interactive desktop GUI built with Java Swing library",
-          "Dynamic scoring algorithm and daily productivity gamification",
+          "Rigorous OOP application (Encapsulation, Inheritance, Polymorphism, Abstraction)",
+          "Interactive desktop GUI developed with Java Swing library",
+          "Scoring algorithm and daily productivity gamification",
           "Structured task state management"
         ]
       },
@@ -288,21 +344,33 @@ window.PORTFOLIO_DATA = {
         en: "Commercial Web System for Inventory Management & Real-Time Operations"
       },
       description: {
-        pt: "Sistema web responsivo desenvolvido de forma autônoma como desenvolvedor freelancer para gestão comercial. A solução otimiza o controle de estoque, o registro de entradas e saídas de mercadorias e a emissão de relatórios operacionais e financeiros em tempo real. Construído com arquitetura modularizada em JavaScript ES6, sem dependências externas pesadas, priorizando alta velocidade, facilidade de uso e robustez em ambiente de produção.",
-        en: "Responsive web system built autonomously as a freelance developer for commercial management. The solution streamlines inventory tracking, merchandise inflow and outflow records, and real-time operational and financial reporting. Designed with a modular ES6 JavaScript architecture with zero heavy external dependencies, prioritizing fast load times, usability, and production reliability."
+        pt: "Sistema web desenvolvido como freelancer para gestão comercial. Otimiza o controle de estoque, registros de entradas/saídas e relatórios financeiros em tempo real. Arquitetura modularizada em JavaScript ES6, com alta performance e sem dependências pesadas.",
+        en: "Commercial web application developed as a freelance engineer. Streamlines inventory tracking, inflow/outflow management, and real-time financial reporting. Built with modular ES6 JavaScript for fast load times and zero heavy dependencies."
       },
+      screens: [
+        {
+          src: "assets/images/projects/gobiraba-1.svg",
+          alt: "GobirabaSystem - Controle de Estoque e Tabela",
+          caption: { pt: "Gestão de Estoque & Alertas de Reposição", en: "Inventory Management & Restock Alerts" }
+        },
+        {
+          src: "assets/images/projects/gobiraba-2.svg",
+          alt: "GobirabaSystem - Relatórios Financeiros e Lucro",
+          caption: { pt: "Relatório de Vendas e Margem de Lucro em Tempo Real", en: "Sales & Profit Margin Reports in Real Time" }
+        }
+      ],
       highlights: {
         pt: [
-          "Arquitetura front-end modularizada em JavaScript ES6",
+          "Arquitetura front-end modularizada em JavaScript ES6 puro",
           "Cálculos em tempo real de saldo, saídas e relatórios operacionais",
-          "Layout responsivo mobile-first acessível em múltiplos dispositivos",
-          "Deploy e execução ágil via GitHub Pages"
+          "Layout responsivo mobile-first acessível em qualquer dispositivo",
+          "Deploy ágil e execução rápida via GitHub Pages"
         ],
         en: [
-          "Modular front-end architecture built in modern ES6 JavaScript",
-          "Real-time calculations for balances, outflows, and operational reports",
-          "Mobile-first responsive design accessible across devices",
-          "Fast static deployment and execution via GitHub Pages"
+          "Modular front-end architecture in pure modern ES6 JavaScript",
+          "Real-time calculations for balances, transactions, and reports",
+          "Mobile-first responsive layout accessible on any device",
+          "Fast deployment and execution via GitHub Pages"
         ]
       },
       techs: ["JavaScript (ES6 Modular)", "HTML5", "CSS3 Moderno", "Local Storage", "GitHub Pages"],
@@ -328,16 +396,16 @@ window.PORTFOLIO_DATA = {
       },
       bullets: {
         pt: [
-          "Atuação no ciclo completo de engenharia, sustentação e evolução da plataforma BoraLá utilizando C#, .NET 8, ASP.NET Core MVC e MySQL.",
-          "Implementação e isolamento de serviços de domínio para controle de inscrições, credenciamento e presença, gerenciamento de papéis (RBAC) e resolução de conflitos de tracking no EF Core.",
-          "Correção de vulnerabilidades de segurança e adequação à LGPD (proteção de CPF/Login em crachás e QR Codes criptografados), além de controle transacional no MySQL.",
-          "Criação e manutenção de testes automatizados com MSTest, Moq e EF Core InMemory, além de atuação contínua em revisões de código (Peer Review) em Pull Requests."
+          "Ciclo completo de engenharia, sustentação e evolução da plataforma BoraLá com C#, .NET 8, ASP.NET Core MVC e MySQL.",
+          "Implementação e isolamento de serviços de domínio para inscrições, credenciamento, presenças e permissões RBAC.",
+          "Adequação rigorosa à LGPD (proteção de CPF/Login em crachás e QR Codes criptografados) e travas transacionais no MySQL.",
+          "Criação e manutenção de testes com MSTest, Moq e EF Core InMemory, além de atuação contínua em revisões de código (Peer Review)."
         ],
         en: [
-          "Full software lifecycle engineering, maintenance, and evolution for the BoraLá platform using C#, .NET 8, ASP.NET Core MVC, and MySQL.",
-          "Implementation and isolation of domain services for registration, accreditation, and attendance control, RBAC authorization, and resolving EF Core entity tracking conflicts.",
-          "Security vulnerability remediation and LGPD compliance (protecting CPF/Login in badges and encrypted QR Codes), along with transactional locking in MySQL.",
-          "Creation and maintenance of automated test suites with MSTest, Moq, and EF Core InMemory, plus continuous participation in Peer Code Reviews on Pull Requests."
+          "Full software lifecycle engineering, maintenance, and evolution for BoraLá platform using C#, .NET 8, ASP.NET Core MVC, and MySQL.",
+          "Implementation and isolation of domain services for registrations, accreditation, attendance, and RBAC permissions.",
+          "Strict LGPD compliance (protecting CPF/Login in badges and encrypted QR Codes) and transactional locking in MySQL.",
+          "Creation and maintenance of automated tests with MSTest, Moq, and EF Core InMemory, plus continuous Peer Code Reviews."
         ]
       }
     },
@@ -357,12 +425,12 @@ window.PORTFOLIO_DATA = {
       },
       bullets: {
         pt: [
-          "Desenvolvimento de ponta a ponta de aplicação web responsiva para controle de estoques, movimentações e relatórios financeiros em tempo real.",
-          "Construção de arquitetura modularizada em JavaScript ES6, garantindo performance extrema e autonomia operacional sem custo de infraestrutura complexa."
+          "Desenvolvimento ponta a ponta de sistema web responsivo para controle de estoques, movimentações e relatórios em tempo real.",
+          "Construção de arquitetura modularizada em JavaScript ES6, garantindo performance extrema e autonomia operacional sem custo de infraestrutura."
         ],
         en: [
-          "End-to-end development of a responsive web application for inventory management, stock transactions, and real-time financial reporting.",
-          "Built with a modular ES6 JavaScript architecture, delivering top performance and complete operational autonomy without heavy infrastructure overhead."
+          "End-to-end development of responsive web application for inventory management, transactions, and real-time reports.",
+          "Modular ES6 JavaScript architecture delivering top performance and complete operational autonomy without infrastructure overhead."
         ]
       }
     }

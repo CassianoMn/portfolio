@@ -1,14 +1,9 @@
-// =============================================================================
-// Portfólio Cassiano Menezes - Motor de Internacionalização (PT-BR / EN)
-// =============================================================================
-
 window.PORTFOLIO_I18N = (function () {
   const STORAGE_KEY = "cassiano_portfolio_lang";
   let currentLang = localStorage.getItem(STORAGE_KEY) || "pt";
 
   const translations = {
     pt: {
-      // Navegação
       "nav.about": "Sobre",
       "nav.projects": "Projetos",
       "nav.experience": "Trajetória",
@@ -19,14 +14,12 @@ window.PORTFOLIO_I18N = (function () {
       "nav.themeToggle": "Alternar tema visual",
       "nav.langToggle": "Mudar para Inglês",
 
-      // Perfil Top Switcher
       "switcher.label": "Filtrar visão por perfil técnico:",
       "switcher.all": "Visão Geral",
       "switcher.dotnet": ".NET / C#",
       "switcher.react": "React & TypeScript",
       "switcher.ai": "IA & Automação",
 
-      // Hero
       "hero.location": "Itabaiana - SE, Brasil",
       "hero.academic": "Graduando em Sistemas de Informação (UFS) • 9º Período",
       "hero.ctaProjects": "Explorar Projetos",
@@ -34,7 +27,6 @@ window.PORTFOLIO_I18N = (function () {
       "hero.copyEmail": "Copiar E-mail",
       "hero.emailCopied": "E-mail copiado!",
 
-      // Seções
       "section.projectsTitle": "Projetos de Engenharia em Destaque",
       "section.projectsSubtitle": "Aplicações reais em produção, projetos acadêmicos avançados e estudos arquiteturais.",
       "section.projectFilteredNote": "Exibindo projetos recomendados para o perfil selecionado.",
@@ -65,16 +57,13 @@ window.PORTFOLIO_I18N = (function () {
       "section.contactGitHub": "GitHub",
       "section.copyEmailAction": "Clique para copiar o e-mail",
 
-      // Toast
       "toast.emailCopied": "E-mail copiado para a área de transferência!",
 
-      // Footer
       "footer.builtWith": "Projetado com arquitetura limpa em HTML5, CSS3 Editorial e JavaScript Vanilla. Sem dependências pesadas.",
       "footer.rights": "Todos os direitos reservados.",
       "footer.source": "Repositório do Portfólio no GitHub"
     },
     en: {
-      // Navigation
       "nav.about": "About",
       "nav.projects": "Projects",
       "nav.experience": "Journey",
@@ -85,14 +74,12 @@ window.PORTFOLIO_I18N = (function () {
       "nav.themeToggle": "Toggle visual theme",
       "nav.langToggle": "Switch to Portuguese",
 
-      // Profile Top Switcher
       "switcher.label": "Filter view by technical profile:",
       "switcher.all": "Overview",
       "switcher.dotnet": ".NET / C#",
       "switcher.react": "React & TypeScript",
       "switcher.ai": "AI & Automation",
 
-      // Hero
       "hero.location": "Itabaiana - SE, Brazil",
       "hero.academic": "B.Sc. in Information Systems (UFS) • 9th Semester",
       "hero.ctaProjects": "Explore Projects",
@@ -100,7 +87,6 @@ window.PORTFOLIO_I18N = (function () {
       "hero.copyEmail": "Copy Email",
       "hero.emailCopied": "Email copied!",
 
-      // Sections
       "section.projectsTitle": "Featured Engineering Projects",
       "section.projectsSubtitle": "Live production systems, advanced academic projects, and architectural case studies.",
       "section.projectFilteredNote": "Showing projects tailored for the active profile.",
@@ -131,10 +117,8 @@ window.PORTFOLIO_I18N = (function () {
       "section.contactGitHub": "GitHub",
       "section.copyEmailAction": "Click to copy email address",
 
-      // Toast
       "toast.emailCopied": "Email address copied to clipboard!",
 
-      // Footer
       "footer.builtWith": "Engineered with clean architecture in HTML5, Editorial CSS, and Vanilla JavaScript. Zero heavy dependencies.",
       "footer.rights": "All rights reserved.",
       "footer.source": "Portfolio GitHub Repository"

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="800" height="450" rx="14" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="14" fill="#0F172A"/>
+  <rect y="28" width="800" height="14" fill="#0F172A"/>
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="5.5" fill="#10B981"/>
+
+  <!-- Address Bar -->
+  <rect x="180" y="9" width="440" height="24" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="25" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">
+    🔒 https://borala.ufs.br/gestor/evento/42
+  </text>
+
+  <!-- Tag Title on Right -->
+  <text x="770" y="25" fill="#38BDF8" font-family="'Inter', sans-serif" font-weight="600" font-size="11" text-anchor="end">
+    BoraLá • Gestão de Eventos & Inscrições
+  </text>
+
+  <!-- Body Content -->
+  <g transform="translate(0, 42)">
+    
+    <rect width="800" height="408" fill="#0B0F17"/>
+
+    <g transform="translate(30, 16)">
+      <!-- Top Event Banner -->
+      <rect x="0" y="0" width="740" height="80" rx="10" fill="#162032" stroke="#A855F7" stroke-width="1.5"/>
+      <text x="24" y="32" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="11">PAINEL DO GESTOR • ASP.NET CORE MVC (.NET 8)</text>
+      <text x="24" y="58" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="800" font-size="18">Simpósio de Tecnologia e Inovação 2026</text>
+      
+      <rect x="560" y="22" width="156" height="36" rx="6" fill="#7C3AED"/>
+      <text x="638" y="45" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="600" font-size="12" text-anchor="middle">+ Novo Lote</text>
+
+      <!-- Stats Cards -->
+      <rect x="0" y="96" width="170" height="64" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="16" y="118" fill="#94A3B8" font-size="10">TOTAL INSCRITOS</text>
+      <text x="16" y="144" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18">480 / 500</text>
+
+      <rect x="190" y="96" width="170" height="64" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="206" y="118" fill="#94A3B8" font-size="10">CREDENCIADOS</text>
+      <text x="206" y="144" fill="#34D399" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18">392 presentes</text>
+
+      <rect x="380" y="96" width="170" height="64" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="396" y="118" fill="#94A3B8" font-size="10">SUBEVENTOS ATIVOS</text>
+      <text x="396" y="144" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18">6 Workshops</text>
+
+      <rect x="570" y="96" width="170" height="64" rx="8" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="586" y="118" fill="#94A3B8" font-size="10">CERTIFICADOS EMITIDOS</text>
+      <text x="586" y="144" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="18">340 emitidos</text>
+
+      <!-- Table Section -->
+      <rect x="0" y="174" width="740" height="195" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="20" y="200" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="700" font-size="13">Participantes & Controle de Presença (MySQL Transacional)</text>
+
+      <!-- Table Header -->
+      <rect x="20" y="214" width="700" height="28" fill="#1E293B" rx="4"/>
+      <text x="30" y="232" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">NOME</text>
+      <text x="240" y="232" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">TIPO INSCRIÇÃO</text>
+      <text x="400" y="232" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">STATUS</text>
+      <text x="530" y="232" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">FREQUÊNCIA</text>
+      <text x="660" y="232" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11">AÇÃO</text>
+
+      <!-- Row 1 -->
+      <text x="30" y="266" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12">Cassiano Menezes</text>
+      <text x="240" y="266" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="12">Estudante (UFS)</text>
+      <text x="400" y="266" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11">✓ ATIVA</text>
+      <text x="530" y="266" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">100% (2/2 dias)</text>
+      <text x="660" y="266" fill="#C084FC" font-family="'Inter', sans-serif" font-weight="600" font-size="11">Crachá [Q]</text>
+
+      <!-- Row 2 -->
+      <line x1="20" y1="284" x2="720" y2="284" stroke="#1E293B"/>
+      <text x="30" y="306" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12">Marcos Vinicius Sodré</text>
+      <text x="240" y="306" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="12">Profissional TI</text>
+      <text x="400" y="306" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11">✓ ATIVA</text>
+      <text x="530" y="306" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">85% (Presente)</text>
+      <text x="660" y="306" fill="#C084FC" font-family="'Inter', sans-serif" font-weight="600" font-size="11">Crachá [Q]</text>
+
+      <!-- Row 3 -->
+      <line x1="20" y1="324" x2="720" y2="324" stroke="#1E293B"/>
+      <text x="30" y="346" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="12">Beatriz Santana</text>
+      <text x="240" y="346" fill="#CBD5E1" font-family="'Inter', sans-serif" font-size="12">Pesquisadora</text>
+      <text x="400" y="346" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11">✓ ATIVA</text>
+      <text x="530" y="346" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">100% (Presente)</text>
+      <text x="660" y="346" fill="#C084FC" font-family="'Inter', sans-serif" font-weight="600" font-size="11">Crachá [Q]</text>
+    </g>
+    
+  </g>
+</svg>

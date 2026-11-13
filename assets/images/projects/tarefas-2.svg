@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="800" height="450" rx="14" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="14" fill="#0F172A"/>
+  <rect y="28" width="800" height="14" fill="#0F172A"/>
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="21" r="5.5" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="5.5" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="5.5" fill="#10B981"/>
+
+  <!-- Address Bar -->
+  <rect x="180" y="9" width="440" height="24" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="25" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">
+    🔒 https://desktop.app/java-swing/gamificacao
+  </text>
+
+  <!-- Tag Title on Right -->
+  <text x="770" y="25" fill="#38BDF8" font-family="'Inter', sans-serif" font-weight="600" font-size="11" text-anchor="end">
+    Gerenciador de Tarefas • Gamificação
+  </text>
+
+  <!-- Body Content -->
+  <g transform="translate(0, 42)">
+    
+    <rect width="800" height="408" fill="#0B0F17"/>
+
+    <g transform="translate(30, 16)">
+      <text x="0" y="20" fill="#F8FAFC" font-family="'Inter', sans-serif" font-weight="800" font-size="17">Sistema de Pontuação & Produtividade Diária</text>
+      <text x="0" y="38" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Algoritmo de cálculo de score baseado em complexidade e prazo das tarefas</text>
+
+      <!-- Score Big Banner -->
+      <rect x="0" y="55" width="740" height="95" rx="10" fill="#111827" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="30" y="90" fill="#F59E0B" font-family="'Inter', sans-serif" font-weight="800" font-size="14">NÍVEL ATUAL: PRODUCER GOLD</text>
+      <text x="30" y="125" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="28">850 PONTOS <tspan font-size="14" fill="#94A3B8">/ 1000 pts para o próximo nível</tspan></text>
+      
+      <rect x="480" y="85" width="230" height="14" rx="7" fill="#1E293B"/>
+      <rect x="480" y="85" width="195" height="14" rx="7" fill="#F59E0B"/>
+      <text x="595" y="120" fill="#CBD5E1" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">85% concluído na semana</text>
+
+      <!-- Stats Grid -->
+      <rect x="0" y="165" width="235" height="195" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="20" y="195" fill="#38BDF8" font-family="'Inter', sans-serif" font-weight="700" font-size="13">Tarefas Concluídas</text>
+      <text x="20" y="240" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="36">28</text>
+      <text x="20" y="265" fill="#34D399" font-family="'Inter', sans-serif" font-size="12">✓ 93.3% taxa de entrega</text>
+      <text x="20" y="330" fill="#94A3B8" font-size="11">+6 tarefas a mais que a semana passada</text>
+
+      <rect x="252" y="165" width="235" height="195" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="272" y="195" fill="#C084FC" font-family="'Inter', sans-serif" font-weight="700" font-size="13">Sequência Ativa (Streak)</text>
+      <text x="272" y="240" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="36">14 dias</text>
+      <text x="272" y="265" fill="#C084FC" font-family="'Inter', sans-serif" font-size="12">🔥 Foco constante</text>
+      <text x="272" y="330" fill="#94A3B8" font-size="11">Recorde pessoal: 21 dias</text>
+
+      <rect x="505" y="165" width="235" height="195" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+      <text x="525" y="195" fill="#34D399" font-family="'Inter', sans-serif" font-weight="700" font-size="13">Tempo Médio p/ Tarefa</text>
+      <text x="525" y="240" fill="#F8FAFC" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="36">45 min</text>
+      <text x="525" y="265" fill="#34D399" font-family="'Inter', sans-serif" font-size="12">⚡ Eficiência Otimizada</text>
+      <text x="525" y="330" fill="#94A3B8" font-size="11">Baseado na técnica Pomodoro</text>
+    </g>
+    
+  </g>
+</svg>

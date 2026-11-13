@@ -10,12 +10,12 @@ window.PORTFOLIO_DATA = {
     phone: "+55 (79) 98836-4351",
     location: "Itabaiana - SE, Brasil",
     workModel: {
-      pt: "100% Remoto / Híbrido",
-      en: "100% Remote / Hybrid"
+      pt: "Remoto / Híbrido",
+      en: "Remote / Hybrid"
     },
     education: {
-      pt: "Bacharelado em Sistemas de Informação (UFS) • 8º Período",
-      en: "B.Sc. in Information Systems (UFS) • 8th Semester"
+      pt: "Bacharelado em Sistemas de Informação (UFS) • 9º Período",
+      en: "B.Sc. in Information Systems (UFS) • 9th Semester"
     },
     socials: {
       github: "https://github.com/CassianoMn",
@@ -34,8 +34,8 @@ window.PORTFOLIO_DATA = {
         en: "Software Engineer & Full Stack Developer"
       },
       tagline: {
-        pt: "Graduando em Sistemas de Informação pela UFS. Foco em arquiteturas sólidas (Clean, Hexagonal), testes automatizados e construção de sistemas ponta a ponta com C#/.NET, React, TypeScript e Inteligência Artificial.",
-        en: "B.Sc. student in Information Systems at UFS. Focused on solid architectures (Clean, Hexagonal), automated testing, and building end-to-end applications with C#/.NET, React, TypeScript, and AI."
+        pt: "Graduando em Sistemas de Informação pela UFS (9º período). Foco em arquiteturas sólidas (Clean, Hexagonal), testes automatizados e construção de sistemas ponta a ponta com C#/.NET, React, TypeScript e Inteligência Artificial.",
+        en: "B.Sc. student in Information Systems at UFS (9th semester). Focused on solid architectures (Clean, Hexagonal), automated testing, and building end-to-end applications with C#/.NET, React, TypeScript, and AI."
       },
       recommendedCv: {
         name: "Cassiano_Menezes_Desenvolvedor_NET_Junior.pdf",
@@ -76,7 +76,7 @@ window.PORTFOLIO_DATA = {
     },
     ai: {
       id: "ai",
-      label: { pt: "AI Engineering & Automação", en: "AI Engineering & Automation" },
+      label: { pt: "IA & Automação", en: "AI & Automation" },
       headline: {
         pt: "Engenharia de IA, Automação & Soluções Inteligentes",
         en: "AI Engineering, Automation & Intelligent Solutions"
@@ -95,7 +95,7 @@ window.PORTFOLIO_DATA = {
   metrics: [
     {
       label: { pt: "Formação Acadêmica", en: "Academic Education" },
-      value: { pt: "8º Período", en: "8th Semester" },
+      value: { pt: "9º Período", en: "9th Semester" },
       sub: { pt: "Sistemas de Informação (UFS)", en: "Information Systems (UFS)" }
     },
     {
@@ -120,6 +120,7 @@ window.PORTFOLIO_DATA = {
       id: "radarpecas",
       title: "RadarPeças",
       badge: { pt: "TCC - UFS", en: "B.Sc. Thesis - UFS" },
+      badgeType: "tech",
       personas: ["dotnet", "react", "all"],
       subtitle: {
         pt: "Plataforma SaaS & Marketplace com Geolocalização Inteligente para o Varejo de Motopeças",
@@ -151,6 +152,7 @@ window.PORTFOLIO_DATA = {
       id: "organizae",
       title: "OrganizAE",
       badge: { pt: "SaaS em Produção", en: "Live SaaS" },
+      badgeType: "live",
       personas: ["react", "ai", "all"],
       subtitle: {
         pt: "Sistema Completo de Gestão Financeira com IA Generativa & OCR",
@@ -182,6 +184,7 @@ window.PORTFOLIO_DATA = {
       id: "borala",
       title: "BoraLá (Eventos)",
       badge: { pt: "ItatechJr / UFS", en: "ItatechJr / UFS" },
+      badgeType: "corp",
       personas: ["dotnet", "all"],
       subtitle: {
         pt: "Plataforma Corporativa para Gestão de Eventos, Credenciamento & Frequência",
@@ -212,7 +215,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "desapegauto",
       title: "DesapegAuto & TEES",
-      badge: { pt: "MVC Original & Arquitetura Hexagonal", en: "Original MVC & Hexagonal Arch" },
+      badge: { pt: "MVC & Arquitetura Hexagonal", en: "MVC & Hexagonal Arch" },
+      badgeType: "tech",
       personas: ["dotnet", "all"],
       subtitle: {
         pt: "Plataforma Web em ASP.NET Core MVC & Refatoração para Arquitetura Hexagonal (Ports & Adapters)",
@@ -245,6 +249,7 @@ window.PORTFOLIO_DATA = {
       id: "tarefas-semanais",
       title: "Gerenciador de Tarefas Semanais",
       badge: { pt: "Java & Swing", en: "Java & Swing" },
+      badgeType: "neutral",
       personas: ["all"],
       subtitle: {
         pt: "Aplicação Desktop em Java com Interface Gráfica e Gamificação de Produtividade",
@@ -275,7 +280,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "gobiraba",
       title: "GobirabaSystem",
-      badge: { pt: "Freelance / Modular JS", en: "Freelance / Modular JS" },
+      badge: { pt: "Aplicação Comercial", en: "Commercial App" },
+      badgeType: "live",
       personas: ["react", "all"],
       subtitle: {
         pt: "Sistema Web Comercial para Controle de Estoque & Operações em Tempo Real",
@@ -371,8 +377,8 @@ window.PORTFOLIO_DATA = {
       institution: "Universidade Federal de Sergipe (UFS)",
       period: "2023 – 2026",
       status: {
-        pt: "8º Período (Conclusão prevista: Dez/2026)",
-        en: "8th Semester (Expected Graduation: Dec/2026)"
+        pt: "9º Período (Conclusão prevista: Dez/2026)",
+        en: "9th Semester (Expected Graduation: Dec/2026)"
       },
       details: {
         pt: "Formação sólida em Engenharia de Software, Algoritmos, Banco de Dados, Redes, Arquitetura de Computadores e Inteligência Artificial. TCC focado na plataforma RadarPeças (.NET 8 + PostGIS + React).",
@@ -423,8 +429,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "net-jr",
       title: {
-        pt: "Desenvolvedor .NET Júnior (ATS)",
-        en: "Junior .NET Developer (ATS)"
+        pt: "Desenvolvedor .NET Júnior",
+        en: "Junior .NET Developer"
       },
       target: {
         pt: "Vagas focadas em C#, .NET 8, ASP.NET Core, APIs RESTful, SQL e Testes",
@@ -436,8 +442,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "fullstack-react-ts",
       title: {
-        pt: "Desenvolvedor Full Stack React / Node / TypeScript (ATS)",
-        en: "Full Stack React / Node / TypeScript Developer (ATS)"
+        pt: "Desenvolvedor Full Stack React / Node / TypeScript",
+        en: "Full Stack React / Node / TypeScript Developer"
       },
       target: {
         pt: "Vagas Full Stack modernas com React, TypeScript, Node.js, REST e GraphQL",
@@ -449,8 +455,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "ai-automation",
       title: {
-        pt: "Estágio em IA Generativa, Automação & Vibe Coding (ATS)",
-        en: "Generative AI, Automation & Vibe Coding Intern (ATS)"
+        pt: "Estágio em IA Generativa, Automação & Vibe Coding",
+        en: "Generative AI, Automation & Vibe Coding Intern"
       },
       target: {
         pt: "Vagas em IA Generativa, Agentes, Automação de Workflows (n8n/Make) e APIs",
@@ -462,8 +468,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "fullstack-aspnet-mvc",
       title: {
-        pt: "Desenvolvedor Full Stack ASP.NET MVC Júnior (ATS)",
-        en: "Full Stack ASP.NET MVC Junior Developer (ATS)"
+        pt: "Desenvolvedor Full Stack ASP.NET MVC Júnior",
+        en: "Full Stack ASP.NET MVC Junior Developer"
       },
       target: {
         pt: "Vagas com ASP.NET MVC, Razor Views, C#, SQL e arquitetura corporativa",
@@ -475,21 +481,21 @@ window.PORTFOLIO_DATA = {
     {
       id: "intern-software-eng",
       title: {
-        pt: "Estágio em Engenharia de Software Full Stack (ATS)",
-        en: "Full Stack Software Engineering Intern (ATS)"
+        pt: "Estágio em Engenharia de Software Full Stack",
+        en: "Full Stack Software Engineering Intern"
       },
       target: {
         pt: "Estágios em desenvolvimento de software, C#, Java, React, SQL e Metodologias Ágeis",
         en: "Internships in software development, C#, Java, React, SQL, and Agile Methodologies"
       },
       file: "assets/cv/Cassiano_Menezes_Estagio_Engenharia_Software.pdf",
-      keywords: ["UFS (8º Período)", "C#/.NET", "Java", "React", "POO", "SQL", "Scrum", "Git Flow"]
+      keywords: ["UFS (9º Período)", "C#/.NET", "Java", "React", "POO", "SQL", "Scrum", "Git Flow"]
     },
     {
       id: "backend-node-ts",
       title: {
-        pt: "Desenvolvedor Back-End Node.js & TypeScript Júnior (ATS)",
-        en: "Junior Back-End Node.js & TypeScript Developer (ATS)"
+        pt: "Desenvolvedor Back-End Node.js & TypeScript Júnior",
+        en: "Junior Back-End Node.js & TypeScript Developer"
       },
       target: {
         pt: "Vagas de Back-End com Node.js, TypeScript, REST, GraphQL, Docker e SQL",
@@ -501,8 +507,8 @@ window.PORTFOLIO_DATA = {
     {
       id: "remote-en",
       title: {
-        pt: "Junior Software Engineer (Remote Americas / Global - English ATS)",
-        en: "Junior Software Engineer (Remote Americas / Global - English ATS)"
+        pt: "Junior Software Engineer (Remote Americas / Global - English)",
+        en: "Junior Software Engineer (Remote Americas / Global - English)"
       },
       target: {
         pt: "International remote roles in English (.NET, React, TypeScript, Node.js, SQL)",

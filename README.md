@@ -13,7 +13,7 @@ Portfólio profissional de Engenharia de Software desenvolvido com foco em perfo
   - *.NET / C#* (Back-End, ASP.NET Core, EF Core, Arquitetura Hexagonal)
   - *React & TypeScript* (Front-End Moderno, Node.js, REST e GraphQL)
   - *AI Engineering & Automação* (Google Gemini, Agentes de IA, n8n, Webhooks)
-- **Central de Currículos ATS:** Download direto de currículos adaptados e diagramados em padrão One-Page Standard para leitores ópticos.
+- **Central de Currículos:** Download direto de currículos adaptados e diagramados em padrão One-Page Standard para leitores ópticos e recrutadores técnicos.
 - **Ações Rápidas de Contato:** Cópia de e-mail em 1 clique com notificação toast instantânea, WhatsApp e redes profissionais.
 
 ---
@@ -30,7 +30,7 @@ Portifólio_Cassiano/
 │   │   ├── data.js              # Modelagem de dados de projetos, skills, trajetórias e currículos
 │   │   ├── i18n.js              # Motor de internacionalização (PT / EN) com persistência
 │   │   └── main.js              # Orquestrador do perfil dinâmico, renderização e interatividades
-│   ├── cv/                      # Currículos reais em formato PDF otimizados para ATS
+│   ├── cv/                      # Currículos reais em formato PDF diagramados em One-Page Standard
 │   │   ├── Cassiano_Menezes_Desenvolvedor_NET_Junior.pdf
 │   │   ├── Cassiano_Menezes_FullStack_React_Node_TypeScript.pdf
 │   │   ├── Cassiano_Menezes_Estagio_IA_Automacao_VibeCoding.pdf

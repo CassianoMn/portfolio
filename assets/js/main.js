@@ -37,7 +37,7 @@
   }
 
   // ===========================================================================
-  // Gerenciamento de Tema (Dark / Light Editorial)
+  // Gerenciamento de Tema (Dark / Light Editorial - 60/30/10)
   // ===========================================================================
   function initTheme() {
     const savedTheme = localStorage.getItem(STORAGE_THEME_KEY) || "dark";
@@ -63,8 +63,8 @@
     const isDark = theme === "dark";
     elements.themeToggleBtn.setAttribute("aria-label", isDark ? "Alternar para modo claro" : "Alternar para modo escuro");
     elements.themeToggleBtn.innerHTML = isDark
-      ? `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>`
-      : `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>`;
+      ? `<svg class="w-4 h-4 text-[#38BDF8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>`
+      : `<svg class="w-4 h-4 text-[#0284C7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>`;
   }
 
   // ===========================================================================
@@ -109,7 +109,7 @@
   }
 
   // ===========================================================================
-  // Renderização de Métricas
+  // Renderização de Métricas com Destaque Ciano (10% Accent)
   // ===========================================================================
   function renderMetrics() {
     if (!elements.metricsGrid) return;
@@ -117,16 +117,16 @@
     const metrics = window.PORTFOLIO_DATA.metrics;
 
     elements.metricsGrid.innerHTML = metrics.map(m => `
-      <div class="stat-block">
-        <div class="font-mono text-xs uppercase tracking-wider text-muted mb-1">${m.label[lang]}</div>
-        <div class="text-xl sm:text-2xl font-bold tracking-tight text-primary mb-1">${m.value[lang]}</div>
-        <div class="text-xs sm:text-sm text-secondary">${m.sub[lang]}</div>
+      <div class="stat-block group">
+        <div class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] mb-1">${m.label[lang]}</div>
+        <div class="text-xl sm:text-2xl stat-block-value mb-1 group-hover:scale-105 transition-transform origin-left">${m.value[lang]}</div>
+        <div class="text-xs sm:text-sm text-[var(--text-secondary)]">${m.sub[lang]}</div>
       </div>
     `).join("");
   }
 
   // ===========================================================================
-  // Renderização de Projetos
+  // Renderização de Projetos com Badges Funcionais e Alto Contraste
   // ===========================================================================
   function renderProjects() {
     if (!elements.projectsGrid) return;
@@ -140,13 +140,19 @@
 
     elements.projectsGrid.innerHTML = filteredProjects.map(p => {
       const highlightsHtml = p.highlights[lang].map(h => `
-        <li class="flex items-start gap-2 text-xs sm:text-sm text-secondary">
-          <span class="text-primary font-mono select-none">›</span>
+        <li class="flex items-start gap-2 text-xs sm:text-sm text-[var(--text-secondary)]">
+          <span class="text-[var(--accent-cyan)] font-mono select-none font-bold">›</span>
           <span>${h}</span>
         </li>
       `).join("");
 
       const techsHtml = p.techs.map(t => `<span class="tech-tag">${t}</span>`).join("");
+
+      // Mapeamento de classe de badge funcional
+      let badgeClass = "badge-neutral";
+      if (p.badgeType === "live") badgeClass = "badge-live";
+      else if (p.badgeType === "tech") badgeClass = "badge-tech";
+      else if (p.badgeType === "corp") badgeClass = "badge-corp";
 
       const githubBtn = p.github ? `
         <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost" title="${t("section.viewRepo")}">
@@ -157,7 +163,7 @@
 
       const secondaryGithubBtn = p.secondaryGithub ? `
         <a href="${p.secondaryGithub}" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost" title="${t("section.viewSecondaryRepo")}">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+          <svg class="w-4 h-4 text-[var(--accent-cyan)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
           <span>Original MVC</span>
         </a>
       ` : "";
@@ -173,18 +179,18 @@
         <article class="project-card">
           <div>
             <div class="flex items-center justify-between gap-3 mb-3">
-              <span class="editorial-badge">${p.badge[lang]}</span>
+              <span class="${badgeClass}">${p.badge[lang]}</span>
               <div class="flex items-center gap-2">
                 ${demoBtn}
               </div>
             </div>
 
-            <h3 class="text-xl font-bold tracking-tight text-primary mb-1">${p.title}</h3>
-            <p class="font-mono text-xs text-secondary font-medium mb-3">${p.subtitle[lang]}</p>
-            <p class="text-sm text-secondary leading-relaxed mb-4">${p.description[lang]}</p>
+            <h3 class="text-xl font-bold tracking-tight text-[var(--text-primary)] mb-1">${p.title}</h3>
+            <p class="font-mono text-xs text-[var(--accent-cyan)] font-medium mb-3">${p.subtitle[lang]}</p>
+            <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">${p.description[lang]}</p>
 
             <div class="mb-4">
-              <div class="font-mono text-xs uppercase tracking-wider text-muted mb-2">${t("section.keyHighlights")}</div>
+              <div class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] mb-2 font-semibold">${t("section.keyHighlights")}</div>
               <ul class="space-y-1.5">${highlightsHtml}</ul>
             </div>
           </div>
@@ -214,17 +220,17 @@
     if (elements.experienceTimeline) {
       const exp = window.PORTFOLIO_DATA.experience;
       elements.experienceTimeline.innerHTML = exp.map(item => `
-        <div class="border-l-2 border-[var(--border-subtle)] pl-4 sm:pl-6 pb-8 relative">
-          <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[var(--text-primary)]"></div>
+        <div class="border-l-2 border-[var(--border-subtle)] pl-4 sm:pl-6 pb-8 relative group">
+          <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_8px_var(--accent-glow)]"></div>
           <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-            <h4 class="text-base sm:text-lg font-bold text-primary">${item.role[lang]}</h4>
-            <span class="font-mono text-xs text-muted">${item.period[lang]}</span>
+            <h4 class="text-base sm:text-lg font-bold text-[var(--text-primary)]">${item.role[lang]}</h4>
+            <span class="font-mono text-xs text-[var(--text-muted)]">${item.period[lang]}</span>
           </div>
-          <div class="text-sm font-semibold text-secondary mb-2">${item.company} • <span class="font-normal text-muted">${item.location[lang]}</span></div>
+          <div class="text-sm font-semibold text-[var(--text-secondary)] mb-2">${item.company} • <span class="font-normal text-[var(--text-muted)]">${item.location[lang]}</span></div>
           <ul class="space-y-1.5 mt-2">
             ${item.bullets[lang].map(b => `
-              <li class="flex items-start gap-2 text-xs sm:text-sm text-secondary">
-                <span class="text-primary font-mono select-none">›</span>
+              <li class="flex items-start gap-2 text-xs sm:text-sm text-[var(--text-secondary)]">
+                <span class="text-[var(--accent-cyan)] font-mono select-none font-bold">›</span>
                 <span>${b}</span>
               </li>
             `).join("")}
@@ -236,14 +242,14 @@
     if (elements.educationTimeline) {
       const edu = window.PORTFOLIO_DATA.education;
       elements.educationTimeline.innerHTML = edu.map(item => `
-        <div class="border-l-2 border-[var(--border-subtle)] pl-4 sm:pl-6 pb-6 relative">
-          <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[var(--text-primary)]"></div>
+        <div class="border-l-2 border-[var(--border-subtle)] pl-4 sm:pl-6 pb-6 relative group">
+          <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_8px_var(--accent-glow)]"></div>
           <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-            <h4 class="text-base sm:text-lg font-bold text-primary">${item.degree[lang]}</h4>
-            <span class="font-mono text-xs text-muted">${item.period}</span>
+            <h4 class="text-base sm:text-lg font-bold text-[var(--text-primary)]">${item.degree[lang]}</h4>
+            <span class="font-mono text-xs text-[var(--text-muted)]">${item.period}</span>
           </div>
-          <div class="text-sm font-semibold text-secondary mb-1">${item.institution} • <span class="font-normal text-muted">${item.status[lang]}</span></div>
-          <p class="text-xs sm:text-sm text-secondary mt-1 leading-relaxed">${item.details[lang]}</p>
+          <div class="text-sm font-semibold text-[var(--text-secondary)] mb-1">${item.institution} • <span class="font-semibold text-[var(--accent-cyan)]">${item.status[lang]}</span></div>
+          <p class="text-xs sm:text-sm text-[var(--text-secondary)] mt-1 leading-relaxed">${item.details[lang]}</p>
         </div>
       `).join("");
     }
@@ -258,9 +264,10 @@
     const skills = window.PORTFOLIO_DATA.skills;
 
     elements.skillsGrid.innerHTML = skills.map(group => `
-      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-lg p-5">
-        <h4 class="font-mono text-xs uppercase tracking-wider font-bold text-primary mb-3 pb-2 border-b border-[var(--border-subtle)]">
-          ${group.category[lang]}
+      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-lg p-5 hover:border-[var(--border-strong)] transition-all">
+        <h4 class="font-mono text-xs uppercase tracking-wider font-bold text-[var(--text-primary)] mb-3 pb-2 border-b border-[var(--border-subtle)] flex items-center justify-between">
+          <span>${group.category[lang]}</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)]"></span>
         </h4>
         <div class="flex flex-wrap gap-1.5">
           ${group.items.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
@@ -270,7 +277,7 @@
   }
 
   // ===========================================================================
-  // Renderização da Central de Currículos ATS
+  // Renderização da Central de Currículos Especializados
   // ===========================================================================
   function renderCurriculums() {
     if (!elements.cvGrid) return;
@@ -278,25 +285,25 @@
     const cvs = window.PORTFOLIO_DATA.curriculums;
 
     elements.cvGrid.innerHTML = cvs.map(cv => `
-      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-lg p-5 flex flex-col justify-between hover:border-[var(--border-strong)] transition-all">
+      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-lg p-5 flex flex-col justify-between hover:border-[var(--accent-cyan)] hover:shadow-[0_8px_25px_var(--accent-glow)] transition-all">
         <div>
           <div class="flex items-center gap-2 mb-2">
-            <svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-[var(--accent-cyan)] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <h4 class="font-bold text-sm sm:text-base text-primary">${cv.title[lang]}</h4>
+            <h4 class="font-bold text-sm sm:text-base text-[var(--text-primary)]">${cv.title[lang]}</h4>
           </div>
-          <p class="text-xs sm:text-sm text-secondary mb-3 leading-relaxed">${cv.target[lang]}</p>
+          <p class="text-xs sm:text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">${cv.target[lang]}</p>
           <div class="mb-4">
-            <span class="font-mono text-[11px] uppercase tracking-wider text-muted block mb-1.5">${t("section.cvKeywords")}</span>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-[var(--text-muted)] block mb-1.5 font-semibold">${t("section.cvKeywords")}</span>
             <div class="flex flex-wrap gap-1">
-              ${cv.keywords.map(kw => `<span class="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[var(--tag-bg)] text-secondary border border-[var(--border-subtle)]">${kw}</span>`).join("")}
+              ${cv.keywords.map(kw => `<span class="tech-tag text-[11px] px-2 py-0.5">${kw}</span>`).join("")}
             </div>
           </div>
         </div>
 
         <div class="pt-3 border-t border-[var(--border-subtle)] flex items-center justify-between">
-          <span class="font-mono text-[11px] text-muted">PDF • One-Page ATS</span>
+          <span class="font-mono text-[11px] text-[var(--text-muted)]">PDF • One-Page Standard</span>
           <a href="${cv.file}" download="${cv.file.split('/').pop()}" class="btn-editorial-primary text-xs py-1.5 px-3">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

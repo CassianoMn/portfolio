@@ -13,7 +13,7 @@ window.PORTFOLIO_I18N = (function () {
       "nav.projects": "Projetos",
       "nav.experience": "Trajetória",
       "nav.skills": "Competências",
-      "nav.cv": "Currículos ATS",
+      "nav.cv": "Currículos",
       "nav.contact": "Contato",
       "nav.openCvHub": "Ver Todos os Currículos",
       "nav.themeToggle": "Alternar tema visual",
@@ -27,9 +27,8 @@ window.PORTFOLIO_I18N = (function () {
       "switcher.ai": "IA & Automação",
 
       // Hero
-      "hero.status": "Disponível para oportunidades 100% Remotas ou Híbridas",
       "hero.location": "Itabaiana - SE, Brasil",
-      "hero.academic": "Graduando em Sistemas de Informação (UFS) • 8º Período",
+      "hero.academic": "Graduando em Sistemas de Informação (UFS) • 9º Período",
       "hero.ctaProjects": "Explorar Projetos",
       "hero.ctaContact": "Falar no WhatsApp",
       "hero.copyEmail": "Copiar E-mail",
@@ -53,8 +52,8 @@ window.PORTFOLIO_I18N = (function () {
       "section.skillsTitle": "Matriz de Competências Técnicas",
       "section.skillsSubtitle": "Domínio técnico consolidado em back-end, front-end, inteligência artificial e engenharia.",
 
-      "section.cvTitle": "Central de Currículos Adaptados (ATS)",
-      "section.cvSubtitle": "Currículos otimizados no padrão One-Page Standard para leitores ópticos e algoritmos de recrutamento.",
+      "section.cvTitle": "Central de Currículos Especializados",
+      "section.cvSubtitle": "Currículos diagramados no padrão One-Page Standard por perfil técnico.",
       "section.cvDownloadBtn": "Baixar PDF",
       "section.cvKeywords": "Palavras-chave:",
 
@@ -80,7 +79,7 @@ window.PORTFOLIO_I18N = (function () {
       "nav.projects": "Projects",
       "nav.experience": "Journey",
       "nav.skills": "Skills",
-      "nav.cv": "ATS Resumes",
+      "nav.cv": "Resumes",
       "nav.contact": "Contact",
       "nav.openCvHub": "View All Resumes",
       "nav.themeToggle": "Toggle visual theme",
@@ -94,9 +93,8 @@ window.PORTFOLIO_I18N = (function () {
       "switcher.ai": "AI & Automation",
 
       // Hero
-      "hero.status": "Available for 100% Remote or Hybrid opportunities",
       "hero.location": "Itabaiana - SE, Brazil",
-      "hero.academic": "B.Sc. in Information Systems (UFS) • 8th Semester",
+      "hero.academic": "B.Sc. in Information Systems (UFS) • 9th Semester",
       "hero.ctaProjects": "Explore Projects",
       "hero.ctaContact": "Chat on WhatsApp",
       "hero.copyEmail": "Copy Email",
@@ -120,8 +118,8 @@ window.PORTFOLIO_I18N = (function () {
       "section.skillsTitle": "Technical Skills Matrix",
       "section.skillsSubtitle": "Consolidated proficiency across back-end, front-end, artificial intelligence, and engineering.",
 
-      "section.cvTitle": "Tailored ATS Resumes Hub",
-      "section.cvSubtitle": "One-Page Standard optimized resumes for ATS parsing algorithms and technical recruiters.",
+      "section.cvTitle": "Tailored Resumes Hub",
+      "section.cvSubtitle": "One-Page Standard resumes tailored by technical engineering domain.",
       "section.cvDownloadBtn": "Download PDF",
       "section.cvKeywords": "Keywords:",
 

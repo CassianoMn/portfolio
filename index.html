@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cassiano Menezes | Engenheiro de Software & Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Engenharia de Software de Cassiano Menezes. C# / .NET 8, ASP.NET Core, React 19, TypeScript, Arquitetura Hexagonal, Clean Code, Testes Automatizados e IA Generativa." />
+  <meta name="author" content="Cassiano Menezes" />
+  <meta property="og:title" content="Cassiano Menezes | Engenheiro de Software & Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Engenheiro de Software com foco em C#/.NET 8, React 19, TypeScript, Arquitetura Hexagonal e Inteligência Artificial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cassianomn.github.io/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Tailwind CSS CDN para utilitários responsivos rápidos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Customizados Editoriais -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="min-h-screen text-[var(--text-primary)] bg-[var(--bg-primary)]">
+
+  <!-- =========================================================================
+       Header & Barra de Navegação Editorial
+       ========================================================================= -->
+  <header class="editorial-header">
+    <div class="editorial-container py-3.5 flex flex-wrap items-center justify-between gap-3">
+      <!-- Marca / Nome -->
+      <a href="#" class="flex items-center gap-2 text-inherit no-underline group">
+        <span class="w-2.5 h-2.5 rounded-full bg-[var(--accent)] group-hover:scale-125 transition-transform"></span>
+        <span class="font-bold tracking-tight text-base sm:text-lg">Cassiano Menezes</span>
+        <span class="font-mono text-xs text-[var(--text-muted)] hidden sm:inline">/ dev</span>
+      </a>
+
+      <!-- Links de Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[var(--text-secondary)]">
+        <a href="#sobre" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.about">Sobre</a>
+        <a href="#projetos" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.projects">Projetos</a>
+        <a href="#trajetoria" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.experience">Trajetória</a>
+        <a href="#competencias" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.skills">Competências</a>
+        <a href="#curriculos" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.cv">Currículos ATS</a>
+        <a href="#contato" class="hover:text-[var(--text-primary)] transition-colors no-underline" data-i18n="nav.contact">Contato</a>
+      </nav>
+
+      <!-- Ações: Alternância de Idioma e Tema -->
+      <div class="flex items-center gap-2">
+        <!-- Toggle Idioma -->
+        <button id="lang-toggle-btn" class="btn-editorial-ghost font-mono text-xs py-1.5 px-2.5" title="Alternar idioma">
+          <span class="font-bold">EN</span> <span class="text-xs text-[var(--text-muted)]">/ PT</span>
+        </button>
+
+        <!-- Toggle Tema -->
+        <button id="theme-toggle-btn" class="btn-editorial-ghost p-2" title="Alternar tema">
+          <!-- Ícone injetado pelo JavaScript -->
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de Filtro Dinâmico de Perfil Técnico (Top Switcher) -->
+    <div class="border-t border-[var(--border-subtle)] bg-[var(--bg-surface)] py-2">
+      <div class="editorial-container flex flex-col sm:flex-row items-center justify-between gap-2">
+        <span class="font-mono text-xs text-[var(--text-muted)] hidden sm:inline" data-i18n="switcher.label">
+          Filtrar visão por perfil técnico:
+        </span>
+        <div class="profile-pill-bar" role="tablist">
+          <button class="profile-pill-btn active" data-persona="all" role="tab" data-i18n="switcher.all">Visão Geral</button>
+          <button class="profile-pill-btn" data-persona="dotnet" role="tab" data-i18n="switcher.dotnet">.NET / C#</button>
+          <button class="profile-pill-btn" data-persona="react" role="tab" data-i18n="switcher.react">React & TypeScript</button>
+          <button class="profile-pill-btn" data-persona="ai" role="tab" data-i18n="switcher.ai">IA & Automação</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- =======================================================================
+         Hero Section Editorial
+         ======================================================================= -->
+    <section id="sobre" class="pt-12 sm:pt-16 pb-12">
+      <div class="editorial-container">
+        
+        <!-- Status de Disponibilidade -->
+        <div class="flex items-center gap-2 mb-6">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span class="font-mono text-xs font-medium text-[var(--text-secondary)]" data-i18n="hero.status">
+            Disponível para oportunidades 100% Remotas ou Híbridas
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <!-- Coluna Principal de Conteúdo -->
+          <div class="lg:col-span-8">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)] mb-3 leading-tight">
+              Cassiano Menezes
+            </h1>
+            <h2 id="hero-headline" class="text-xl sm:text-2xl font-semibold text-[var(--text-secondary)] mb-4 tracking-tight">
+              Engenheiro de Software & Desenvolvedor Full Stack
+            </h2>
+            <p id="hero-tagline" class="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed mb-6 font-normal">
+              Graduando em Sistemas de Informação pela UFS. Foco em arquiteturas sólidas (Clean, Hexagonal), testes automatizados e construção de sistemas ponta a ponta com C#/.NET, React, TypeScript e Inteligência Artificial.
+            </p>
+
+            <!-- Metadados de Localização e Formação -->
+            <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm font-mono text-[var(--text-muted)] mb-8 pb-6 border-b border-[var(--border-subtle)]">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span data-i18n="hero.location">Itabaiana - SE, Brasil</span>
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+                <span data-i18n="hero.academic">Sistemas de Informação (UFS) • 8º Período</span>
+              </span>
+            </div>
+
+            <!-- Botões de Ação do Hero -->
+            <div class="flex flex-wrap items-center gap-3">
+              <!-- Botão Dinâmico de Download de CV -->
+              <a id="hero-cv-btn" href="assets/cv/Cassiano_Menezes_Desenvolvedor_NET_Junior.pdf" download class="btn-editorial-primary">
+                <!-- SVG e texto populados via JS -->
+              </a>
+
+              <!-- Botão Navegar Projetos -->
+              <a href="#projetos" class="btn-editorial-secondary" data-i18n="hero.ctaProjects">
+                Explorar Projetos
+              </a>
+
+              <!-- Botão Copiar E-mail -->
+              <button class="btn-editorial-secondary btn-copy-email" title="Copiar e-mail">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                <span data-i18n="hero.copyEmail">Copiar E-mail</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Coluna Lateral: Foto / Card Social -->
+          <div class="lg:col-span-4 flex flex-col items-center sm:items-start lg:items-center">
+            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border border-[var(--border-strong)] bg-[var(--bg-surface)] p-1.5 shadow-sm mb-4">
+              <img src="assets/images/avatar.jpg" alt="Cassiano Menezes" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://avatars.githubusercontent.com/u/107015712?v=4'" />
+            </div>
+
+            <!-- Links Rápidos e Sociais -->
+            <div class="flex flex-wrap justify-center sm:justify-start lg:justify-center gap-2">
+              <a href="https://github.com/CassianoMn" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost" title="GitHub">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com/in/CassianoMn" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost" title="LinkedIn">
+                <svg class="w-4 h-4 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://wa.me/5579988364351" target="_blank" rel="noopener noreferrer" class="btn-editorial-ghost" title="WhatsApp">
+                <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicadores & Métricas Chave -->
+        <div id="metrics-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-12">
+          <!-- Populado dinamicamente via main.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="editorial-hr" />
+
+    <!-- =======================================================================
+         Seção de Projetos em Destaque
+         ======================================================================= -->
+    <section id="projetos" class="py-8">
+      <div class="editorial-container">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] block mb-1">Portfolio</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]" data-i18n="section.projectsTitle">
+              Projetos de Engenharia em Destaque
+            </h2>
+            <p class="text-sm text-[var(--text-secondary)] mt-1" data-i18n="section.projectsSubtitle">
+              Aplicações reais em produção, projetos acadêmicos avançados e estudos arquiteturais.
+            </p>
+          </div>
+          <span class="font-mono text-xs text-[var(--text-muted)] shrink-0" data-i18n="section.projectFilteredNote">
+            Exibindo projetos recomendados para o perfil selecionado.
+          </span>
+        </div>
+
+        <!-- Grid de Projetos -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Populado dinamicamente via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <hr class="editorial-hr" />
+
+    <!-- =======================================================================
+         Trajetória Profissional & Formação Acadêmica
+         ======================================================================= -->
+    <section id="trajetoria" class="py-8">
+      <div class="editorial-container">
+        <div class="mb-10">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] block mb-1">Career & Education</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]" data-i18n="section.expTitle">
+            Trajetória Profissional & Acadêmica
+          </h2>
+          <p class="text-sm text-[var(--text-secondary)] mt-1" data-i18n="section.expSubtitle">
+            Experiência prática com desenvolvimento, sustentação, testes e engenharia de software.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <!-- Coluna de Experiência Profissional -->
+          <div class="lg:col-span-7">
+            <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] font-bold mb-6 flex items-center gap-2" data-i18n="section.experienceHeader">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              Experiência de Trabalho
+            </h3>
+            <div id="experience-timeline" class="space-y-2">
+              <!-- Populado dinamicamente via main.js -->
+            </div>
+          </div>
+
+          <!-- Coluna de Formação Acadêmica -->
+          <div class="lg:col-span-5">
+            <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] font-bold mb-6 flex items-center gap-2" data-i18n="section.educationHeader">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
+              Formação Acadêmica
+            </h3>
+            <div id="education-timeline" class="space-y-2">
+              <!-- Populado dinamicamente via main.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="editorial-hr" />
+
+    <!-- =======================================================================
+         Matriz de Competências Técnicas
+         ======================================================================= -->
+    <section id="competencias" class="py-8">
+      <div class="editorial-container">
+        <div class="mb-8">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] block mb-1">Hard Skills</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]" data-i18n="section.skillsTitle">
+            Matriz de Competências Técnicas
+          </h2>
+          <p class="text-sm text-[var(--text-secondary)] mt-1" data-i18n="section.skillsSubtitle">
+            Domínio técnico consolidado em back-end, front-end, inteligência artificial e engenharia.
+          </p>
+        </div>
+
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populado dinamicamente via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <hr class="editorial-hr" />
+
+    <!-- =======================================================================
+         Central de Currículos Adaptados (ATS)
+         ======================================================================= -->
+    <section id="curriculos" class="py-8">
+      <div class="editorial-container">
+        <div class="mb-8">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] block mb-1">Downloads & ATS Optimization</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]" data-i18n="section.cvTitle">
+            Central de Currículos Adaptados (ATS)
+          </h2>
+          <p class="text-sm text-[var(--text-secondary)] mt-1" data-i18n="section.cvSubtitle">
+            Currículos otimizados no padrão One-Page Standard para leitores ópticos e algoritmos de recrutamento.
+          </p>
+        </div>
+
+        <div id="cv-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populado dinamicamente via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <hr class="editorial-hr" />
+
+    <!-- =======================================================================
+         Seção de Contato Direto & Agendamento
+         ======================================================================= -->
+    <section id="contato" class="py-12 bg-[var(--bg-surface-subtle)] border-y border-[var(--border-subtle)]">
+      <div class="editorial-container text-center max-w-2xl">
+        <span class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] block mb-2">Get In Touch</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)] mb-3" data-i18n="section.contactTitle">
+          Vamos Construir Algo Sólido Juntos?
+        </h2>
+        <p class="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed mb-8" data-i18n="section.contactSubtitle">
+          Estou aberto a oportunidades como Desenvolvedor Júnior, Estagiário de Engenharia de Software ou Projetos Freelancer.
+        </p>
+
+        <!-- Grade de Ações de Contato -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-left">
+          <!-- Copiar E-mail -->
+          <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-4 rounded-lg flex items-center justify-between gap-3 group hover:border-[var(--border-strong)] transition-all">
+            <div>
+              <span class="font-mono text-xs text-[var(--text-muted)] block" data-i18n="section.contactEmail">E-mail Direto</span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">cassianomenezes1@gmail.com</span>
+            </div>
+            <button class="btn-editorial-ghost p-2 btn-copy-email shrink-0" title="Copiar e-mail">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+            </button>
+          </div>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/5579988364351" target="_blank" rel="noopener noreferrer" class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-4 rounded-lg flex items-center justify-between gap-3 group hover:border-[var(--border-strong)] transition-all no-underline text-inherit">
+            <div>
+              <span class="font-mono text-xs text-[var(--text-muted)] block" data-i18n="section.contactWhatsApp">WhatsApp</span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">+55 (79) 98836-4351</span>
+            </div>
+            <span class="text-emerald-500 group-hover:translate-x-1 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/CassianoMn" target="_blank" rel="noopener noreferrer" class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-4 rounded-lg flex items-center justify-between gap-3 group hover:border-[var(--border-strong)] transition-all no-underline text-inherit">
+            <div>
+              <span class="font-mono text-xs text-[var(--text-muted)] block" data-i18n="section.contactLinkedIn">LinkedIn</span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">linkedin.com/in/CassianoMn</span>
+            </div>
+            <span class="text-[#0077b5] group-hover:translate-x-1 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/CassianoMn" target="_blank" rel="noopener noreferrer" class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-4 rounded-lg flex items-center justify-between gap-3 group hover:border-[var(--border-strong)] transition-all no-underline text-inherit">
+            <div>
+              <span class="font-mono text-xs text-[var(--text-muted)] block" data-i18n="section.contactGitHub">GitHub</span>
+              <span class="text-sm font-semibold text-[var(--text-primary)]">github.com/CassianoMn</span>
+            </div>
+            <span class="text-[var(--text-primary)] group-hover:translate-x-1 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Rodapé Editorial
+       ========================================================================= -->
+  <footer class="py-8 bg-[var(--bg-primary)] border-t border-[var(--border-subtle)]">
+    <div class="editorial-container flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[var(--text-muted)]">
+      <div>
+        <span>© 2026 Cassiano Menezes. </span>
+        <span data-i18n="footer.rights">Todos os direitos reservados.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/CassianoMn" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--text-primary)] transition-colors no-underline">
+          GitHub
+        </a>
+        <span>•</span>
+        <a href="https://linkedin.com/in/CassianoMn" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--text-primary)] transition-colors no-underline">
+          LinkedIn
+        </a>
+        <span>•</span>
+        <a href="#sobre" class="hover:text-[var(--text-primary)] transition-colors no-underline">
+          ↑ Topo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Toast Notification Component
+       ========================================================================= -->
+  <div class="toast-container" aria-live="polite">
+    <div id="editorial-toast" class="toast" role="alert">
+      <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span id="toast-message">E-mail copiado para a área de transferência!</span>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

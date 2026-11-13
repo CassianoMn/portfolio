@@ -139,13 +139,6 @@
       : allProjects.filter(p => p.personas.includes(activePersona));
 
     elements.projectsGrid.innerHTML = filteredProjects.map(p => {
-      const highlightsHtml = p.highlights[lang].map(h => `
-        <li class="flex items-start gap-2 text-xs sm:text-sm text-[var(--text-secondary)]">
-          <span class="text-[var(--accent-cyan)] font-mono select-none font-bold">›</span>
-          <span>${h}</span>
-        </li>
-      `).join("");
-
       const techsHtml = p.techs.map(t => `<span class="tech-tag">${t}</span>`).join("");
 
       // Mapeamento de classe de badge funcional
@@ -187,16 +180,11 @@
 
             <h3 class="text-xl font-bold tracking-tight text-[var(--text-primary)] mb-1">${p.title}</h3>
             <p class="font-mono text-xs text-[var(--accent-cyan)] font-medium mb-3">${p.subtitle[lang]}</p>
-            <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">${p.description[lang]}</p>
-
-            <div class="mb-4">
-              <div class="font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] mb-2 font-semibold">${t("section.keyHighlights")}</div>
-              <ul class="space-y-1.5">${highlightsHtml}</ul>
-            </div>
+            <p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">${p.description[lang]}</p>
           </div>
 
           <div>
-            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-[var(--border-subtle)] mb-3">
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-[var(--border-subtle)] mb-3">
               ${techsHtml}
             </div>
             <div class="flex items-center justify-between pt-1">
@@ -256,7 +244,7 @@
   }
 
   // ===========================================================================
-  // Renderização da Matriz de Competências
+  // Renderização da Matriz de Competências (Títulos Destacados & Grid Otimizado)
   // ===========================================================================
   function renderSkills() {
     if (!elements.skillsGrid) return;
@@ -264,13 +252,15 @@
     const skills = window.PORTFOLIO_DATA.skills;
 
     elements.skillsGrid.innerHTML = skills.map(group => `
-      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-lg p-5 hover:border-[var(--border-strong)] transition-all">
-        <h4 class="font-mono text-xs uppercase tracking-wider font-bold text-[var(--text-primary)] mb-3 pb-2 border-b border-[var(--border-subtle)] flex items-center justify-between">
-          <span>${group.category[lang]}</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)]"></span>
-        </h4>
-        <div class="flex flex-wrap gap-1.5">
-          ${group.items.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
+      <div class="border border-[var(--border-subtle)] bg-[var(--bg-surface)] rounded-xl p-5 sm:p-6 hover:border-[var(--accent-cyan)] hover:shadow-[0_8px_30px_var(--accent-glow)] transition-all duration-500 flex flex-col justify-between">
+        <div>
+          <h4 class="text-base sm:text-lg font-bold text-[var(--text-primary)] tracking-tight mb-4 pb-3 border-b border-[var(--border-subtle)] flex items-center justify-between">
+            <span>${group.category[lang]}</span>
+            <span class="w-2 h-2 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_8px_var(--accent-glow)]"></span>
+          </h4>
+          <div class="flex flex-wrap gap-2">
+            ${group.items.map(skill => `<span class="tech-tag">${skill}</span>`).join("")}
+          </div>
         </div>
       </div>
     `).join("");

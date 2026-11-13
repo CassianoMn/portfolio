@@ -301,73 +301,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* Badges de Projetos Estruturados com Cores Funcionais */
-.badge-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
-  background-color: rgba(16, 185, 129, 0.12);
-  color: #34D399;
-  border: 1px solid rgba(16, 185, 129, 0.35);
-}
-
-[data-theme="light"] .badge-live {
-  background-color: #ECFDF5;
-  color: #065F46;
-  border-color: #A7F3D0;
-}
-
-.badge-tech {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
-  background-color: rgba(56, 189, 248, 0.12);
-  color: #38BDF8;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-}
-
-[data-theme="light"] .badge-tech {
-  background-color: #F0F9FF;
-  color: #0369A1;
-  border-color: #BAE6FD;
-}
-
-.badge-corp {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
-  background-color: rgba(168, 85, 247, 0.12);
-  color: #C084FC;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-}
-
-[data-theme="light"] .badge-corp {
-  background-color: #FAF5FF;
-  color: #6B21A8;
-  border-color: #E9D5FF;
-}
-
+/* Badges de Projetos com Transição Suave e Lenta */
+.badge-live,
+.badge-tech,
+.badge-corp,
 .badge-neutral {
   display: inline-flex;
   align-items: center;
@@ -377,31 +314,103 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.25rem 0.65rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.badge-live:hover,
+.badge-tech:hover,
+.badge-corp:hover,
+.badge-neutral:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+.badge-live {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.badge-live:hover {
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.6);
+}
+
+[data-theme="light"] .badge-live {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border-color: #A7F3D0;
+}
+
+.badge-tech {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.badge-tech:hover {
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+[data-theme="light"] .badge-tech {
+  background-color: #F0F9FF;
+  color: #0369A1;
+  border-color: #BAE6FD;
+}
+
+.badge-corp {
+  background-color: rgba(168, 85, 247, 0.12);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.badge-corp:hover {
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.25);
+  border-color: rgba(168, 85, 247, 0.6);
+}
+
+[data-theme="light"] .badge-corp {
+  background-color: #FAF5FF;
+  color: #6B21A8;
+  border-color: #E9D5FF;
+}
+
+.badge-neutral {
   background-color: var(--tag-bg);
   color: var(--tag-text);
   border: 1px solid var(--tag-border);
 }
 
-/* Tech Tags em Alto Contraste */
+.badge-neutral:hover {
+  border-color: var(--border-strong);
+}
+
+/* Tech Tags em Alto Contraste com Transições Suaves e Lentas (0.45s) */
 .tech-tag {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
   background-color: var(--tag-bg);
   color: var(--tag-text);
   border: 1px solid var(--tag-border);
-  transition: all 0.15s ease;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
 }
 
 .tech-tag:hover {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--accent-glow);
+  background-color: var(--bg-surface-subtle);
 }
 
 /* Dividers */

@@ -400,14 +400,14 @@ window.PORTFOLIO_DATA = {
         pt: "Front-End & Interfaces Modernas",
         en: "Front-End & Modern Interfaces"
       },
-      items: ["React 19", "TypeScript", "JavaScript (ES6+)", "Vite", "Tailwind CSS", "Leaflet Maps", "Razor Views", "HTML5", "CSS3", "Java Swing (GUI)"]
+      items: ["React 19", "Next.js", "TypeScript", "JavaScript (ES6+)", "Vite", "Tailwind CSS", "Leaflet Maps", "Razor Views", "HTML5", "CSS3", "Java Swing (GUI)"]
     },
     {
       category: {
-        pt: "IA Generativa, Automação & No-Code",
-        en: "Generative AI, Automation & Low-Code"
+        pt: "IA Generativa & Agentes",
+        en: "Generative AI & Agents"
       },
-      items: ["Google Gemini (IA & OCR)", "Agentes de IA", "Prompt Engineering", "n8n", "Make (Integromat)", "Zapier", "Webhooks", "APIs REST", "Prototipação Ágil"]
+      items: ["Gemini", "Claude", "ChatGPT", "Agentes de IA", "Prompt Engineering", "n8n", "Webhooks", "APIs REST", "Prototipação Ágil"]
     },
     {
       category: {
@@ -418,10 +418,17 @@ window.PORTFOLIO_DATA = {
     },
     {
       category: {
-        pt: "Qualidade, Arquitetura & Metodologias",
-        en: "Quality, Architecture & Methodologies"
+        pt: "Ferramentas, Prototipação & Deploy",
+        en: "Tools, Prototyping & Deploy"
       },
-      items: ["Clean Architecture", "Arquitetura Hexagonal (Ports & Adapters)", "Testes Automatizados", "MSTest", "Moq", "Playwright (E2E)", "Métodos Ágeis (Scrum/Kanban)", "Git Flow", "Code Review (Peer Review)", "Docker", "CI/CD"]
+      items: ["Figma", "Google Stitch", "Vercel", "Docker", "Git Flow", "CI/CD", "Postman", "Local Storage"]
+    },
+    {
+      category: {
+        pt: "Arquitetura & Qualidade de Software",
+        en: "Architecture & Software Quality"
+      },
+      items: ["Clean Architecture", "Arquitetura Hexagonal (Ports & Adapters)", "Testes Automatizados", "MSTest", "Moq", "Playwright (E2E)", "Métodos Ágeis (Scrum/Kanban)", "Code Review (Peer Review)"]
     }
   ],
 
@@ -459,11 +466,11 @@ window.PORTFOLIO_DATA = {
         en: "Generative AI, Automation & Vibe Coding Intern"
       },
       target: {
-        pt: "Vagas em IA Generativa, Agentes, Automação de Workflows (n8n/Make) e APIs",
-        en: "Roles in Generative AI, AI Agents, Workflow Automation (n8n/Make), and APIs"
+        pt: "Vagas em IA Generativa, Agentes, Automação de Workflows (n8n), APIs e Ferramentas Modernas",
+        en: "Roles in Generative AI, AI Agents, Workflow Automation (n8n), APIs, and Modern Tools"
       },
       file: "assets/cv/Cassiano_Menezes_Estagio_IA_Automacao_VibeCoding.pdf",
-      keywords: ["Google Gemini", "Agentes de IA", "Prompt Engineering", "n8n", "Make", "Webhooks", "Python", "React"]
+      keywords: ["Gemini", "Claude", "ChatGPT", "Agentes de IA", "Prompt Engineering", "n8n", "Webhooks", "React"]
     },
     {
       id: "fullstack-aspnet-mvc",

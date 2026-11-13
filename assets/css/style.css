@@ -1,6 +1,6 @@
 /* =============================================================================
    Portfólio Cassiano Menezes - Clean Minimalist Editorial Stylesheet
-   Regra de Cores 60-30-10 com Destaques em Azul Elétrico / Ciano Técnico
+   Regra de Cores 60-30-10 com Destaques em Ciano e Transições Suaves e Lentas (0.7s)
    ============================================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -11,9 +11,6 @@
 
   /* =========================================================================
      Regra de Cores 60-30-10 (Editorial Light Mode)
-     60% Base / Fundo: #F8FAFC (Slate 50)
-     30% Estrutura / Superfícies & Texto: #FFFFFF, #E2E8F0, #0F172A, #475569
-     10% Acento & Destaque: #0284C7 (Sky/Blue 600) & #0EA5E9
      ========================================================================= */
   --bg-primary: #F8FAFC;
   --bg-surface: #FFFFFF;
@@ -22,6 +19,9 @@
   --text-primary: #0F172A;
   --text-secondary: #475569;
   --text-muted: #64748B;
+
+  --hero-name-color: #09090B;
+  --hero-summary-color: #334155;
   
   --border-subtle: #E2E8F0;
   --border-strong: #CBD5E1;
@@ -30,7 +30,7 @@
   --accent: #0284C7;
   --accent-contrast: #FFFFFF;
   --accent-cyan: #0284C7;
-  --accent-glow: rgba(2, 132, 199, 0.15);
+  --accent-glow: rgba(2, 132, 199, 0.18);
   --accent-emerald: #059669;
   
   --bg-pill-active: #0F172A;
@@ -41,15 +41,12 @@
   --tag-border: #E2E8F0;
   
   --card-hover-border: #0284C7;
-  --card-hover-shadow: 0 10px 30px rgba(2, 132, 199, 0.12);
+  --card-hover-shadow: 0 12px 35px rgba(2, 132, 199, 0.15);
 }
 
 [data-theme="dark"] {
   /* =========================================================================
      Regra de Cores 60-30-10 (Editorial Dark Mode)
-     60% Base / Fundo: #0B0F17 (Deep Graphite/Navy)
-     30% Estrutura / Superfícies & Texto: #111827, #1E293B, #F9FAFB, #94A3B8
-     10% Acento & Destaque: #38BDF8 (Sky/Cyan 400) & #0EA5E9
      ========================================================================= */
   --bg-primary: #0B0F17;
   --bg-surface: #111827;
@@ -58,6 +55,10 @@
   --text-primary: #F9FAFB;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
+
+  /* Contraste Editorial Elevado no Hero */
+  --hero-name-color: #FFFFFF;
+  --hero-summary-color: #E2E8F0;
   
   --border-subtle: #1E293B;
   --border-strong: #334155;
@@ -66,18 +67,18 @@
   --accent: #38BDF8;
   --accent-contrast: #0B0F17;
   --accent-cyan: #38BDF8;
-  --accent-glow: rgba(56, 189, 248, 0.20);
+  --accent-glow: rgba(56, 189, 248, 0.22);
   --accent-emerald: #10B981;
   
   --bg-pill-active: #162032;
   --text-pill-active: #38BDF8;
   
   --tag-bg: #162032;
-  --tag-text: #E2E8F0;
+  --tag-text: #F1F5F9;
   --tag-border: #1E293B;
   
   --card-hover-border: #38BDF8;
-  --card-hover-shadow: 0 12px 35px rgba(56, 189, 248, 0.15);
+  --card-hover-shadow: 0 14px 40px rgba(56, 189, 248, 0.18);
 }
 
 * {
@@ -102,7 +103,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .font-mono {
@@ -128,10 +129,10 @@ body {
   border-bottom: 1px solid var(--border-subtle);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
 }
 
-/* Segmented Profile Switcher com Destaque Ciano (10% Accent) */
+/* Segmented Profile Switcher com Transições Lentas e Suaves (0.7s) */
 .profile-pill-bar {
   display: inline-flex;
   align-items: center;
@@ -156,12 +157,12 @@ body {
   color: var(--text-secondary);
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .profile-pill-btn:hover {
   color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .profile-pill-btn.active {
@@ -179,7 +180,7 @@ body {
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
-/* Editorial Buttons */
+/* Editorial Buttons com Hover Suave */
 .btn-editorial-primary {
   display: inline-flex;
   align-items: center;
@@ -196,7 +197,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] .btn-editorial-primary {
@@ -208,9 +209,9 @@ body {
 }
 
 .btn-editorial-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
-  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.38);
+  filter: brightness(1.1);
 }
 
 .btn-editorial-secondary {
@@ -228,13 +229,15 @@ body {
   border: 1px solid var(--border-strong);
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-editorial-secondary:hover {
   background-color: var(--bg-surface-subtle);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--accent-glow);
 }
 
 .btn-editorial-ghost {
@@ -251,45 +254,47 @@ body {
   border: 1px solid transparent;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-editorial-ghost:hover {
-  color: var(--text-primary);
+  color: var(--accent-cyan);
   background-color: var(--bg-surface-subtle);
   border-color: var(--border-subtle);
+  transform: translateY(-1px);
 }
 
-/* Metric / Stat Blocks com Acento Ciano */
+/* Metric / Stat Blocks com Hover Lento e Suave (0.7s) */
 .stat-block {
   border: 1px solid var(--border-subtle);
   border-top: 2px solid var(--border-strong);
   background-color: var(--bg-surface);
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stat-block:hover {
   border-color: var(--border-strong);
   border-top-color: var(--accent-cyan);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px var(--accent-glow);
 }
 
 .stat-block-value {
   color: var(--accent-cyan);
   font-weight: 800;
   letter-spacing: -0.02em;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Project Cards com Glow no Hover e Alto Contraste */
+/* Project Cards com Glow no Hover e Transição Suave (0.7s) */
 .project-card {
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-surface);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1.75rem;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.7s ease, box-shadow 0.7s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -298,10 +303,10 @@ body {
 .project-card:hover {
   border-color: var(--card-hover-border);
   box-shadow: var(--card-hover-shadow);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
-/* Badges de Projetos com Transição Suave e Lenta */
+/* Badges de Projetos com Hover Lento e Suave (0.7s) */
 .badge-live,
 .badge-tech,
 .badge-corp,
@@ -314,9 +319,9 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.8rem;
   border-radius: 6px;
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
@@ -335,8 +340,8 @@ body {
 }
 
 .badge-live:hover {
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
-  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.3);
+  border-color: rgba(16, 185, 129, 0.7);
 }
 
 [data-theme="light"] .badge-live {
@@ -352,8 +357,8 @@ body {
 }
 
 .badge-tech:hover {
-  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
-  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.3);
+  border-color: rgba(56, 189, 248, 0.7);
 }
 
 [data-theme="light"] .badge-tech {
@@ -369,8 +374,8 @@ body {
 }
 
 .badge-corp:hover {
-  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.25);
-  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.3);
+  border-color: rgba(168, 85, 247, 0.7);
 }
 
 [data-theme="light"] .badge-corp {
@@ -387,21 +392,22 @@ body {
 
 .badge-neutral:hover {
   border-color: var(--border-strong);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* Tech Tags em Alto Contraste com Transições Suaves e Lentas (0.45s) */
+/* Tech Tags em Alto Contraste com Transições Lentas e Suaves (0.7s) */
 .tech-tag {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.3rem 0.65rem;
+  padding: 0.35rem 0.7rem;
   border-radius: 6px;
   background-color: var(--tag-bg);
   color: var(--tag-text);
   border: 1px solid var(--tag-border);
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
 }
 
@@ -409,7 +415,7 @@ body {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px var(--accent-glow);
+  box-shadow: 0 6px 16px var(--accent-glow);
   background-color: var(--bg-surface-subtle);
 }
 
@@ -448,7 +454,7 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow);
   transform: translateY(1rem);
   opacity: 0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: auto;
 }
 
